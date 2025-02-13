@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secondapptest/screens/checkin.dart';
 import 'package:secondapptest/screens/login.dart';
 
 
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: 'Noto' ,
         // This is the theme of your application.
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
         
         useMaterial3: true,
       ),
-      home: const Login(title: "ColaboraUnimed"),
+      home: const Checkin(title: "ColaboraUnimed"),
       
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'checkin.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -126,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
          child: Column(
             children: [
               Text("Como você está se sentindo hoje?", style: TextStyle(
-                fontSize: 16,
+                fontSize: 12,
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
               ),),
@@ -136,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: emojis.map((emoji) {
                     return GestureDetector(
                       onTap: () {
-                        print("Emoji selecionado: $emoji");
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const Checkin(title: "laksjdsalk")),);
                       },
                       child: Text(
                         emoji,
@@ -147,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Text("Faça seu check-in",  style: TextStyle(
-                fontSize: 14,
+                fontSize: 18,
                 color: Colors.black,
               ),)
             ],
