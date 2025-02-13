@@ -20,17 +20,19 @@ class _CheckinState extends State<Checkin> {
     showDialog(context: context, 
     builder: (BuildContext ctx) {
       return AlertDialog(
+        backgroundColor: Color.fromARGB(0, 0, 0, 0),
         contentPadding: EdgeInsets.zero,
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
               width: double.infinity,
+              height: 32,
               color: const Color.fromARGB(255, 214, 210, 210),
               padding: const EdgeInsets.all(16),
               child: const Text(
               'Você enviou o seu checkin', 
-              textAlign: TextAlign.center, 
+              textAlign: TextAlign.start, 
               style: TextStyle(
                 color: Color.fromARGB(255, 0, 153, 93) ,
                 fontSize: 18,
@@ -39,7 +41,8 @@ class _CheckinState extends State<Checkin> {
             ),
             Container(
                 width: double.infinity,
-                color: Color.fromARGB(160, 0, 153, 92),
+                height: 64,
+                color: Color.fromARGB(104, 27, 255, 164),
                 padding: const EdgeInsets.all(16.0),
                 child: const Text(
                   'Parabéns pelo autocuidado!',
@@ -51,7 +54,7 @@ class _CheckinState extends State<Checkin> {
             ),
         ),
         SizedBox(height: 15,),
-        Container(
+        SizedBox(
           width: 200,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -59,6 +62,7 @@ class _CheckinState extends State<Checkin> {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                 backgroundColor: Color.fromARGB(255, 0, 153, 93), // fundo verde // texto branco
+                minimumSize: const Size(200, 32),
                 ),
                 onPressed: (){
                   Navigator.pop(context);
@@ -71,7 +75,8 @@ class _CheckinState extends State<Checkin> {
               SizedBox(height: 20,),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 0, 153, 93), // fundo verde // texto branco
+                backgroundColor: Color.fromARGB(255, 0, 153, 93),
+                minimumSize: const Size(200, 32), // fundo verde // texto branco
                 ),
                 onPressed: (){
                   Navigator.pop(context);
@@ -199,14 +204,17 @@ class _CheckinState extends State<Checkin> {
               color: const Color.fromARGB(51, 95, 248, 187) ,
               child:  Center(
                 child: Text("Emocionalmente", style: TextStyle(
-                  color: Color.fromARGB(255, 0, 153, 93)
+                  color: Color.fromARGB(255, 0, 153, 93),
+                  fontSize: 16,
                 ),),
               ),
               ),
               SizedBox(height: 15,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: emojis.map((emoji) => Text(emoji, style: TextStyle(fontSize: 30))).toList(),
+                children: emojis.map((emoji) => Text(emoji, style: TextStyle(
+                  fontSize: 30
+                  ))).toList(),
               ),
                Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -232,7 +240,8 @@ class _CheckinState extends State<Checkin> {
               color: const Color.fromARGB(51, 95, 248, 187) ,
               child:   Center(
                 child: Text("Fisicamente", style: TextStyle(
-                  color: Color.fromARGB(255, 0, 153, 93)
+                  color: Color.fromARGB(255, 0, 153, 93),
+                  fontSize: 16,
                 ),),
               ),
               ),
