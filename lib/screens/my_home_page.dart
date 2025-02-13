@@ -20,7 +20,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   
-  final List<String> emojis = ["😡", "😟", "😐", "😊", "😍"];
+  final List<String> emojis = ["☹", "🙁", "😐", "🙂", "😀"];
 
   
 
@@ -33,12 +33,12 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 243, 242, 242),
+      backgroundColor: const Color.fromARGB(255, 230, 240, 236),
       appBar: AppBar(
         // TRY THIS: Try changing the color here to a specific color (to
         // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
         // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.onPrimary,
+        backgroundColor:const Color.fromARGB(255, 230, 240, 236),
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
@@ -46,18 +46,19 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomNavigationBar: ClipRRect(
         borderRadius: const BorderRadius.only(
-        topLeft: Radius.circular(24),
-        topRight: Radius.circular(24),
-        bottomLeft: Radius.circular(24),
-        bottomRight:  Radius.circular(24)
+        topLeft: Radius.circular(0),
+        topRight: Radius.circular(0),
+        bottomLeft: Radius.circular(0),
+        bottomRight:  Radius.circular(0)
+        
        ),
        child: SizedBox(
         height: 60,
          child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          backgroundColor: Color.fromARGB(255, 9, 86, 11),
-          selectedItemColor: Color.fromARGB(255, 9, 86, 11),
-          unselectedItemColor: Color.fromARGB(255, 9, 86, 11),
+          backgroundColor: Color.fromARGB(255, 0, 61, 37),
+          selectedItemColor: Color.fromARGB(255, 0, 61, 37),
+          unselectedItemColor: Color.fromARGB(255, 0, 61, 37),
           items:  [
           BottomNavigationBarItem(
             icon: Center(
@@ -68,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   shape: BoxShape.circle,
                   color: Colors.white,
                 ),
-                child: const Icon(Icons.home,size: 40, color: Colors.green,),
+                child: const Icon(Icons.home,size: 40, color: Color.fromARGB(255, 0, 61, 37),),
               ),
             ), 
             label: '',
@@ -81,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 shape: BoxShape.circle,
                 color: Colors.white,
               ),
-              child: const Icon(Icons.search,size: 40, color: Colors.green,),
+              child: const Icon(Icons.search,size: 40, color: Color.fromARGB(255, 0, 61, 37),),
             ), 
             label: '',
             ),
@@ -93,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 shape: BoxShape.circle,
                 color: Colors.white,
               ),
-              child: const Icon(Icons.play_arrow, size: 40, color: Colors.green,),
+              child: const Icon(Icons.play_arrow, size: 40, color: Color.fromARGB(255, 0, 61, 37),),
             ), 
             label: '',
             ),
@@ -105,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 shape: BoxShape.circle,
                 color: Colors.white,
               ),
-              child: const Icon(Icons.person, size: 40, color: Colors.green,),
+              child: const Icon(Icons.person, size: 40, color: Color.fromARGB(255, 0, 61, 37),),
             ), 
             label: '',
             ),
@@ -113,14 +114,13 @@ class _MyHomePageState extends State<MyHomePage> {
        ), 
       ),
       body: Container(
-        height: 150,
        padding: EdgeInsets.all(14),
        child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
        children: [
         Container(
          decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 243, 235, 235),
+          color: const Color.fromARGB(10, 0, 153, 92),
           borderRadius: BorderRadius.circular(15),
          ),
          child: Column(
@@ -140,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                       child: Text(
                         emoji,
-                        style: TextStyle(fontSize: 50),
+                        style: TextStyle(fontSize: 40),
                       ),
                     );
                   }).toList()
@@ -155,39 +155,39 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         SizedBox(height: 40),
         ElevatedButton(style: ElevatedButton.styleFrom(
-        backgroundColor: const Color.fromARGB(255, 9, 86, 11),
+        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
         foregroundColor: Colors.white,
-        minimumSize: Size(280, 80),
+        minimumSize: Size(232, 48),
        ), child: Text('Comprometimento'), onPressed: () => 'salve',),
        SizedBox(height: 10),
         ElevatedButton(style: ElevatedButton.styleFrom(
-        backgroundColor: const Color.fromARGB(255, 9, 86, 11),
+        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
         foregroundColor: Colors.white,
-        minimumSize: Size(280, 80),
+        minimumSize:  Size(232, 48),
        ), child: Text('Escolha Premiada'), onPressed: () => 'salve',),
        SizedBox(height: 10),
         ElevatedButton(style: ElevatedButton.styleFrom(
-        backgroundColor: const Color.fromARGB(255, 9, 86, 11),
+        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
         foregroundColor: Colors.white,
-        minimumSize: Size(280, 80),
+        minimumSize:  Size(232, 48),
        ), child: Text('Ranking'), onPressed: () => 'salve',),
        SizedBox(height: 10),
         ElevatedButton(style: ElevatedButton.styleFrom(
-        backgroundColor: const Color.fromARGB(255, 9, 86, 11),
+        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
         foregroundColor: Colors.white,
-        minimumSize: Size(280, 80),
+        minimumSize:  Size(232, 48),
        ), child: Text('Desafio Mensal'), onPressed: () => 'salve',),
        SizedBox(height: 10),
         ElevatedButton(style: ElevatedButton.styleFrom(
-        backgroundColor: const Color.fromARGB(255, 9, 86, 11),
+        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
         foregroundColor: Colors.white,
-        minimumSize: Size(280, 80),
+        minimumSize:  Size(232, 48),
        ), child: Text('Reconhecimento'), onPressed: () => 'salve',),
        SizedBox(height: 10),
         ElevatedButton(style: ElevatedButton.styleFrom(
-        backgroundColor: const Color.fromARGB(255, 9, 86, 11),
+        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
         foregroundColor: Colors.white,
-        minimumSize: Size(280, 80),
+        minimumSize:  Size(232, 48),
        ), child: Text('Inovação & Você'), onPressed: () => 'salve',),
        ] 
        ) 

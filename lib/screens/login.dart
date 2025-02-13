@@ -43,9 +43,15 @@ class _LoginPageState extends State<Login>{
               padding: const EdgeInsets.all(20.0),
               child: Form(
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Realize o Login no aplicativo usando a sua matrícula e senha"),
+                    Align(
+                    alignment: Alignment.centerLeft,
+                    child:  Text(style: TextStyle(
+                      fontSize: 16
+                    ), "Realize o Login no aplicativo usando a sua matrícula e senha")
+                    ),
                     SizedBox(height: 25),
                     TextFormField(
                       decoration: InputDecoration(labelText: "Digite sua matrícula", filled: true, fillColor: Color.fromARGB(255, 255, 255, 255), border: InputBorder.none),
@@ -60,7 +66,7 @@ class _LoginPageState extends State<Login>{
                     child: Text(
                     "Esqueceu sua senha?", 
                     style: TextStyle(
-                      fontSize: 10,
+                      fontSize: 14,
                      color: Color.fromARGB(255, 0, 153, 92) ,
                     ),),
                     ), 
@@ -85,12 +91,12 @@ class _LoginPageState extends State<Login>{
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text("versão 1.0", style: TextStyle(
-                      fontSize: 10,
+                      fontSize: 14,
                      color: Color.fromARGB(255, 0, 153, 92) ,
                       fontWeight: FontWeight.bold,
                     ) ),
                 Text("Direitos Reservados para", style: TextStyle(
-                      fontSize: 10,
+                      fontSize: 14,
                      color: Color.fromARGB(255, 0, 153, 92) ,
                      fontWeight: FontWeight.bold,
                     ) )
