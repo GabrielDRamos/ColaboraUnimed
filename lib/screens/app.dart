@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:secondapptest/screens/login.dart';
 
-import './my_home_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'ColaboraUnimed'),
+      home: const Login(title: "ColaboraUnimed"),
       
     );
   }
