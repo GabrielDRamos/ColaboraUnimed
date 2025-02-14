@@ -74,6 +74,8 @@ class _LoginPageState extends State<Login>{
                     ElevatedButton(
                       onPressed: _login, 
                     style: ElevatedButton.styleFrom(
+                      shadowColor: Color.fromARGB(255, 0, 0, 0),
+                      elevation: 5,
                       backgroundColor: Color.fromARGB(255, 0, 153, 92),
                       foregroundColor: Colors.white,
                       padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),

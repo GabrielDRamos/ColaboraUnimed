@@ -26,33 +26,50 @@ class _CheckinState extends State<Checkin> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 214, 210, 210),
+                borderRadius: BorderRadius.only(topRight: Radius.circular(8), topLeft: Radius.circular(8)),
+                 
+              ),
               width: double.infinity,
-              height: 32,
-              color: const Color.fromARGB(255, 214, 210, 210),
               padding: const EdgeInsets.all(16),
               child: const Text(
               'Você enviou o seu checkin', 
-              textAlign: TextAlign.start, 
+              textAlign: TextAlign.center, 
               style: TextStyle(
                 color: Color.fromARGB(255, 0, 153, 93) ,
-                fontSize: 18,
+                fontSize: 14,
                 fontWeight: FontWeight.bold
               ),),
             ),
             Container(
-                width: double.infinity,
-                height: 64,
-                color: Color.fromARGB(104, 27, 255, 164),
-                padding: const EdgeInsets.all(16.0),
-                child: const Text(
-                  'Parabéns pelo autocuidado!',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
+              decoration: BoxDecoration(
+                 color: Color.fromARGB(255, 255, 255, 255),
+                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(8), bottomLeft: Radius.circular(8)),
+
+              ),
+             
+              child: Container(
+                  decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(bottomRight: Radius.circular(8), bottomLeft: Radius.circular(8)),
+                  color: Color.fromARGB(190, 23, 223, 143),
                   ),
+                   width: double.infinity,
+                  height: 64,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: const Text(
+                      'Parabéns pelo autocuidado!',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color.fromARGB(200, 239, 237, 237),
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold
+                      ),
+                                  ),
+                  ),
+                      ),
             ),
-        ),
         SizedBox(height: 15,),
         SizedBox(
           width: 200,
@@ -63,27 +80,37 @@ class _CheckinState extends State<Checkin> {
                 style: ElevatedButton.styleFrom(
                 backgroundColor: Color.fromARGB(255, 0, 153, 93), // fundo verde // texto branco
                 minimumSize: const Size(200, 32),
+                shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8.0), // Borda arredondada opcional
+                side: const BorderSide(color: Colors.white, width: 1.0), // Borda branca
+                ) // fund
                 ),
                 onPressed: (){
                   Navigator.pop(context);
                   Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage(title: 'ColaboraUnimed')));
                 },
                 child: Text("Voltar a Home", style: TextStyle(
-                  color: Colors.white
+                  color: Colors.white,
+                  fontSize: 9
                 ),),
               ),
               SizedBox(height: 20,),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                 backgroundColor: Color.fromARGB(255, 0, 153, 93),
-                minimumSize: const Size(200, 32), // fundo verde // texto branco
+                minimumSize: const Size(200, 32),
+                shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8.0), // Borda arredondada opcional
+                side: const BorderSide(color: Colors.white, width: 1.0), // Borda branca
+                ) // fundo verde // texto branco
                 ),
                 onPressed: (){
                   Navigator.pop(context);
                   Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage(title: 'ColaboraUnimed')));
                 },
                 child: Text("Ver histórico", style: TextStyle(
-                  color: Colors.white
+                  color: Colors.white,
+                  fontSize: 9
                 ),),
               ),
                SizedBox(height: 8,),
@@ -103,88 +130,56 @@ class _CheckinState extends State<Checkin> {
     });
   }
 
+   Widget _buildNavItem(IconData icon) {
+          return Container(
+            width: 50, // Aumenta a área do toque
+            height: 50,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.white,
+            ),
+            child: Icon(icon, size: 40, color: Color.fromARGB(255, 0, 61, 37)),
+          );
+    }
+
   @override
   Widget build(BuildContext context) {
    return Scaffold(
        backgroundColor: Color.fromARGB(255, 230, 240, 236),
-      appBar: AppBar(
+       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 230, 240, 236),
         title: Text("Checkin", style: TextStyle(
           color: const Color.fromARGB(255, 0, 153, 93),
           fontWeight: FontWeight.bold
         ),),
         centerTitle: true,
+        leading: IconButton(onPressed: () => "fon" , 
+        icon: Image.asset('lib/assets/icons/heart-regular.svg', width: 24, height: 24,))
       ),
 
-      bottomNavigationBar: ClipRRect(
-        borderRadius: const BorderRadius.only(
-        topLeft: Radius.circular(0),
-        topRight: Radius.circular(0),
-        bottomLeft: Radius.circular(0),
-        bottomRight:  Radius.circular(0)
-        
-       ),
-       child: SizedBox(
-        height: 60,
-         child: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: Color.fromARGB(255, 0, 61, 37),
-          selectedItemColor: Color.fromARGB(255, 0, 61, 37),
-          unselectedItemColor: Color.fromARGB(255, 0, 61, 37),
-          items:  [
-          BottomNavigationBarItem(
-            icon: Center(
-              child: Container(
-                width: 40,
-                height: 40,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white,
-                ),
-                child: const Icon(Icons.home,size: 40, color: Color.fromARGB(255, 0, 61, 37),),
+       bottomNavigationBar: ClipRRect(
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(0),
+            topRight: Radius.circular(0),
+            bottomLeft: Radius.circular(0),
+            bottomRight: Radius.circular(0),
+          ),
+          child: SizedBox(
+            height: 75,
+            child: BottomAppBar(
+              color: Color.fromARGB(255, 0, 61, 37),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Centraliza os itens
+                children: [
+                  _buildNavItem(Icons.home),
+                  _buildNavItem(Icons.search),
+                  _buildNavItem(Icons.play_arrow),
+                  _buildNavItem(Icons.person),
+                ],
               ),
-            ), 
-            label: '',
             ),
-              BottomNavigationBarItem(
-            icon: Container(
-              width: 40,
-              height: 40,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.white,
-              ),
-              child: const Icon(Icons.search,size: 40, color: Color.fromARGB(255, 0, 61, 37),),
-            ), 
-            label: '',
-            ),
-              BottomNavigationBarItem(
-            icon: Container(
-              width: 40,
-              height: 40,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.white,
-              ),
-              child: const Icon(Icons.play_arrow, size: 40, color: Color.fromARGB(255, 0, 61, 37),),
-            ), 
-            label: '',
-            ),
-              BottomNavigationBarItem(
-            icon: Container(
-              width: 40,
-              height: 40,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.white,
-              ),
-              child: const Icon(Icons.person, size: 40, color: Color.fromARGB(255, 0, 61, 37),),
-            ), 
-            label: '',
-            ),
-          ]),
-       ), 
-      ),
+          ),
+        ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(

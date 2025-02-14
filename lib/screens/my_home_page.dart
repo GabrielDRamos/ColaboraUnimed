@@ -23,7 +23,17 @@ class _MyHomePageState extends State<MyHomePage> {
   
   final List<String> emojis = ["☹", "🙁", "😐", "🙂", "😀"];
 
-  
+  Widget _buildNavItem(IconData icon) {
+          return Container(
+            width: 50, // Aumenta a área do toque
+            height: 50,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.white,
+            ),
+            child: Icon(icon, size: 40, color: Color.fromARGB(255, 0, 61, 37)),
+          );
+    }
 
   @override
   Widget build(BuildContext context) {
@@ -44,152 +54,123 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
         centerTitle: true,
+        automaticallyImplyLeading: false,
       ),
-      bottomNavigationBar: ClipRRect(
-        borderRadius: const BorderRadius.only(
-        topLeft: Radius.circular(0),
-        topRight: Radius.circular(0),
-        bottomLeft: Radius.circular(0),
-        bottomRight:  Radius.circular(0)
+              bottomNavigationBar: ClipRRect(
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(0),
+            topRight: Radius.circular(0),
+            bottomLeft: Radius.circular(0),
+            bottomRight: Radius.circular(0),
+          ),
+          child: SizedBox(
+            height: 75,
+            child: BottomAppBar(
+              color: Color.fromARGB(255, 0, 61, 37),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Centraliza os itens
+                children: [
+                  _buildNavItem(Icons.home),
+                  _buildNavItem(Icons.search),
+                  _buildNavItem(Icons.play_arrow),
+                  _buildNavItem(Icons.person),
+                ],
+              ),
+            ),
+          ),
+        ),
+
         
-       ),
-       child: SizedBox(
-        height: 60,
-         child: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: Color.fromARGB(255, 0, 61, 37),
-          selectedItemColor: Color.fromARGB(255, 0, 61, 37),
-          unselectedItemColor: Color.fromARGB(255, 0, 61, 37),
-          items:  [
-          BottomNavigationBarItem(
-            icon: Center(
-              child: Container(
-                width: 40,
-                height: 40,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white,
-                ),
-                child: const Icon(Icons.home,size: 40, color: Color.fromARGB(255, 0, 61, 37),),
-              ),
-            ), 
-            label: '',
-            ),
-              BottomNavigationBarItem(
-            icon: Container(
-              width: 40,
-              height: 40,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.white,
-              ),
-              child: const Icon(Icons.search,size: 40, color: Color.fromARGB(255, 0, 61, 37),),
-            ), 
-            label: '',
-            ),
-              BottomNavigationBarItem(
-            icon: Container(
-              width: 40,
-              height: 40,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.white,
-              ),
-              child: const Icon(Icons.play_arrow, size: 40, color: Color.fromARGB(255, 0, 61, 37),),
-            ), 
-            label: '',
-            ),
-              BottomNavigationBarItem(
-            icon: Container(
-              width: 40,
-              height: 40,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.white,
-              ),
-              child: const Icon(Icons.person, size: 40, color: Color.fromARGB(255, 0, 61, 37),),
-            ), 
-            label: '',
-            ),
-          ]),
-       ), 
-      ),
       body: Container(
        padding: EdgeInsets.all(14),
        child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
        children: [
-        Container(
-         decoration: BoxDecoration(
-          color: const Color.fromARGB(10, 0, 153, 92),
-          borderRadius: BorderRadius.circular(15),
-         ),
-         child: Column(
-            children: [
-              Text("Como você está se sentindo hoje?", style: TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              ),),
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: emojis.map((emoji) {
-                    return GestureDetector(
-                      onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const Checkin(title: "laksjdsalk")),);
-                      },
-                      child: Text(
-                        emoji,
-                        style: TextStyle(fontSize: 40),
-                      ),
-                    );
-                  }).toList()
-                ),
-              ),
-              Text("Faça seu check-in",  style: TextStyle(
-                fontSize: 18,
-                color: Colors.black,
-              ),)
-            ],
-         )
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+             height: 150,
+             width: 400,
+             decoration: BoxDecoration(
+              color: const Color.fromARGB(53, 0, 153, 92),
+              borderRadius: BorderRadius.circular(15),
+             ),
+             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Como você está se sentindo hoje?", style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.black,
+                  ),),
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: emojis.map((emoji) {
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const Checkin(title: "laksjdsalk")),);
+                          },
+                          child: Text(
+                            emoji,
+                            style: TextStyle(fontSize: 40),
+                          ),
+                        );
+                      }).toList()
+                    ),
+                  ),
+                  Text("Faça seu check-in",  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold
+                  ),)
+                ],
+             )
+            ),
+          ],
         ),
         SizedBox(height: 40),
         ElevatedButton(style: ElevatedButton.styleFrom(
+        padding: EdgeInsets.all(22),
         backgroundColor: const Color.fromARGB(255, 0, 153, 93),
         foregroundColor: Colors.white,
-        minimumSize: Size(232, 48),
-       ), child: Text('Comprometimento'), onPressed: () => 'salve',),
+        minimumSize: Size(280, 48),
+       ), child: Text('Comprometimento', style: TextStyle(fontSize: 18),), onPressed: () => 'salve',),
        SizedBox(height: 10),
         ElevatedButton(style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.all(22),
         backgroundColor: const Color.fromARGB(255, 0, 153, 93),
         foregroundColor: Colors.white,
-        minimumSize:  Size(232, 48),
-       ), child: Text('Escolha Premiada'), onPressed: () => 'salve',),
+        minimumSize:  Size(280, 48),
+       ), child: Text('Escolha Premiada', style: TextStyle(fontSize: 18)), onPressed: () => 'salve',),
        SizedBox(height: 10),
         ElevatedButton(style: ElevatedButton.styleFrom(
+        padding: EdgeInsets.all(22),
         backgroundColor: const Color.fromARGB(255, 0, 153, 93),
         foregroundColor: Colors.white,
-        minimumSize:  Size(232, 48),
-       ), child: Text('Ranking'), onPressed: () => 'salve',),
+        minimumSize:  Size(280, 48),
+       ), child: Text('Ranking',style: TextStyle(fontSize: 18) ), onPressed: () => 'salve',),
        SizedBox(height: 10),
         ElevatedButton(style: ElevatedButton.styleFrom(
+        padding: EdgeInsets.all(22),
         backgroundColor: const Color.fromARGB(255, 0, 153, 93),
         foregroundColor: Colors.white,
-        minimumSize:  Size(232, 48),
-       ), child: Text('Desafio Mensal'), onPressed: () => 'salve',),
+        minimumSize:  Size(280, 48),
+       ), child: Text('Desafio Mensal', style: TextStyle(fontSize: 18) ), onPressed: () => 'salve',),
        SizedBox(height: 10),
         ElevatedButton(style: ElevatedButton.styleFrom(
+        padding: EdgeInsets.all(22),
         backgroundColor: const Color.fromARGB(255, 0, 153, 93),
         foregroundColor: Colors.white,
-        minimumSize:  Size(232, 48),
-       ), child: Text('Reconhecimento'), onPressed: () => 'salve',),
+        minimumSize:  Size(280, 48),
+       ), child: Text('Reconhecimento', style: TextStyle(fontSize: 18) ), onPressed: () => 'salve',),
        SizedBox(height: 10),
         ElevatedButton(style: ElevatedButton.styleFrom(
+        padding: EdgeInsets.all(22),
         backgroundColor: const Color.fromARGB(255, 0, 153, 93),
         foregroundColor: Colors.white,
-        minimumSize:  Size(232, 48),
-       ), child: Text('Inovação & Você'), onPressed: () => 'salve',),
+        minimumSize:  Size(280, 48),
+       ), child: Text('Inovação & Você', style: TextStyle(fontSize: 18) ), onPressed: () => 'salve',),
        ] 
        ) 
     )
