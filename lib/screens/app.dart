@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:secondapptest/screens/checkin.dart';
 import 'package:secondapptest/screens/login.dart';
 
 
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget {
         
         useMaterial3: true,
       ),
-      home: const Checkin(title: "ColaboraUnimed"),
+      home: const Login(title: "ColaboraUnimed"),
       
     );
   }

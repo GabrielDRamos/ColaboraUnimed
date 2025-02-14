@@ -99,7 +99,8 @@ class _LoginPageState extends State<Login>{
                       fontSize: 14,
                      color: Color.fromARGB(255, 0, 153, 92) ,
                      fontWeight: FontWeight.bold,
-                    ) )
+                    ) ),
+                Image.asset('lib/assets/unimed.png', width: 192, height: 70,)
               ],
             ),
           )
