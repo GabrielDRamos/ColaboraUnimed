@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secondapptest/screens/historico.dart';
 import 'package:secondapptest/screens/my_home_page.dart';
 
 class Checkin extends StatefulWidget {
@@ -107,7 +108,7 @@ class _CheckinState extends State<Checkin> {
                 ),
                 onPressed: (){
                   Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage(title: 'ColaboraUnimed')));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Historico(title: 'ColaboraUnimed')));
                 },
                 child: Text("Ver histórico", style: TextStyle(
                   color: Colors.white,

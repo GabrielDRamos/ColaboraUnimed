@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
               shape: BoxShape.circle,
               color: Colors.white,
             ),
-            child: Icon(icon, size: 40, color: Color.fromARGB(255, 0, 61, 37)),
+            child: Icon(icon, size: 50, color: Color.fromARGB(255, 0, 61, 37)),
           );
     }
 
@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Centraliza os itens
                 children: [
                   _buildNavItem(Icons.home),
-                  _buildNavItem(Icons.search),
+                  _buildNavItem(Icons.question_mark),
                   _buildNavItem(Icons.play_arrow),
                   _buildNavItem(Icons.person),
                 ],
@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-             height: 150,
+             height: 120,
              width: 400,
              decoration: BoxDecoration(
               color: const Color.fromARGB(53, 0, 153, 92),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secondapptest/screens/historico.dart';
 import 'package:secondapptest/screens/login.dart';
 
 
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         
         useMaterial3: true,
       ),
-      home: const Login(title: "ColaboraUnimed"),
+      home: const Historico(title: "ColaboraUnimed"),
       
     );
   }
