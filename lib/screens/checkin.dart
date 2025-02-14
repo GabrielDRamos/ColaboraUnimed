@@ -18,6 +18,7 @@ class _CheckinState extends State<Checkin> {
 
   void _showCheckinDialog() {
     showDialog(context: context, 
+    barrierDismissible: false,
     builder: (BuildContext ctx) {
       return AlertDialog(
         backgroundColor: Color.fromARGB(0, 0, 0, 0),
@@ -264,6 +265,8 @@ class _CheckinState extends State<Checkin> {
            
         SizedBox(height: 100),
         ElevatedButton(style: ElevatedButton.styleFrom(
+        shadowColor: Color.fromARGB(255, 0, 0, 0),
+        elevation: 5,
         backgroundColor: const Color.fromARGB(255, 0, 153, 93),
         foregroundColor: Colors.white,
         minimumSize:  Size(180, 42),
