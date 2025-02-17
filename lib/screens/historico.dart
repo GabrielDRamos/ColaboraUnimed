@@ -13,6 +13,71 @@ class _HistoricoState extends State<Historico> {
   
   @override
   Widget build(BuildContext context) {
+
+   TableRow _tableRow = TableRow(
+    children: <Widget> [
+      Container(
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 0, 153, 93)
+        ),
+        child: Padding(padding: EdgeInsets.all(2.0), child: Text("Data",textAlign: TextAlign.center ,style: TextStyle(
+          color: Colors.white
+        ),),),
+        ),
+
+         Container(
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 0, 153, 93)
+        ),
+        child: Padding(padding: EdgeInsets.all(2.0), child: Text("Entrada", textAlign: TextAlign.center,style: TextStyle(
+          color: Colors.white
+        ),),),
+        ),
+
+         Container(
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 0, 153, 93)
+        ),
+        child: Padding(padding: EdgeInsets.all(2.0), child: Text("Saída",textAlign: TextAlign.center ,style: TextStyle(
+          color: Colors.white
+        ),),),
+        ),
+
+    ]
+   );
+
+   TableRow _tableRowData = TableRow(
+    children: <Widget> [
+        Container(
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 0, 61, 37)
+        ),
+        child: Padding(padding: EdgeInsets.all(2.0), child: Text("00/00/0000",textAlign: TextAlign.center ,style: TextStyle(
+          color: Colors.white
+        ),),),
+        ),
+
+         Container(
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 0, 153, 93)
+        ),
+        child: Padding(padding: EdgeInsets.all(2.0), child: Text("5",textAlign: TextAlign.center ,style: TextStyle(
+          color: Colors.white
+        ),),),
+        ),
+
+         Container(
+        decoration: BoxDecoration(
+          color: Color.fromARGB(101, 0, 153, 92)
+        ),
+        child: Padding(padding: EdgeInsets.all(2.0), child: Text("4",textAlign: TextAlign.center ,style: TextStyle(
+          color: Colors.white
+        ),),),
+        ),
+    ]
+   );
+
+
    return Scaffold(
     backgroundColor: const Color.fromARGB(255, 230, 240, 236),
       appBar: AppBar(
@@ -36,6 +101,7 @@ class _HistoricoState extends State<Historico> {
                 children: [
                 Text("Histórico Emocional", style: TextStyle(
                   color: const Color.fromARGB(255, 0, 153, 93),
+                  fontSize: 18,
                   fontWeight: FontWeight.bold
                 ),)
               ],),
@@ -55,103 +121,118 @@ class _HistoricoState extends State<Historico> {
                        Row(mainAxisAlignment: MainAxisAlignment.center,  children: [Text("Legenda", style: TextStyle(
                         fontWeight: FontWeight.bold
                        ),)]),
-                       Row(
-                          children: [
-                            Container(
-                              alignment: Alignment.center,
-                              height: 20,
-                              width: 18,
-                              decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(4), 
-                              color: Color.fromARGB(255,0, 153, 89),
+                       Padding(
+                         padding: const EdgeInsets.only(left: 8),
+                         child: Row(
+                            children: [
+                              Container(
+                                alignment: Alignment.center,
+                                height: 20,
+                                width: 18,
+                                decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4), 
+                                color: Color.fromARGB(255,0, 153, 89),
+                                ),
+                                child: Text("5 " ,textAlign: TextAlign.center, style: TextStyle(
+                                  color: Colors.white
+                                ),),
                               ),
-                              child: Text("5 " ,textAlign: TextAlign.center, style: TextStyle(
-                                color: Colors.white
-                              ),),
-                            ),
-                            SizedBox(width: 5,),
-                            Text("Me sinto ótimo(a)", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
-                          ],
+                              SizedBox(width: 5,),
+                              Text("Me sinto ótimo(a)", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
+                            ],
+                         ),
                        ),
                        SizedBox(height: 5,),
-                        Row(
-                          children: [
-                             Container(
-                              alignment: Alignment.center,
-                              height: 20,
-                              width: 18,
-                              decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(4), 
-                              color: Color.fromARGB(103, 0, 153, 89),
-                              ),
-                               child: Text("4 " , textAlign: TextAlign.center, style: TextStyle(
-                                color: Colors.white
-                                                           ),),
-                             ),
-                             SizedBox(width: 5,),
-                            Text("Me sinto bem", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
-                          ],
-                       ),
+                        Padding(
+                          padding: const EdgeInsets.only(left:8),
+                          child: Row(
+                            children: [
+                               Container(
+                                alignment: Alignment.center,
+                                height: 20,
+                                width: 18,
+                                decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4), 
+                                color: Color.fromARGB(103, 0, 153, 89),
+                                ),
+                                 child: Text("4 " , textAlign: TextAlign.center, style: TextStyle(
+                                  color: Colors.white
+                                                             ),),
+                               ),
+                               SizedBox(width: 5,),
+                              Text("Me sinto bem", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
+                            ],
+                                                 ),
+                        ),
                        SizedBox(height: 5,),
-                        Row(
-                          children: [
-                            Container(
-                              alignment: Alignment.center,
-                              height: 20,
-                              width: 18,
-                              decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(4), 
-                              color: Color.fromARGB(255,128, 128, 128),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Row(
+                            children: [
+                              Container(
+                                alignment: Alignment.center,
+                                height: 20,
+                                width: 18,
+                                decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4), 
+                                color: Color.fromARGB(255,128, 128, 128),
+                                ),
+                                child: Text("3 " , textAlign: TextAlign.center, style: TextStyle( 
+                                  color: Colors.white
+                                ),),
                               ),
-                              child: Text("3 " , textAlign: TextAlign.center, style: TextStyle( 
-                                color: Colors.white
-                              ),),
-                            ),
-                            SizedBox(width: 5,),
-                            Text("Me sinto neutro", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
-                          ],
-                       ),
+                              SizedBox(width: 5,),
+                              Text("Me sinto neutro", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
+                            ],
+                                                 ),
+                        ),
                        SizedBox(height: 5,),
-                        Row(
-                          children: [
-                             Container(
-                              alignment: Alignment.center,
-                              height: 20,
-                              width: 18,
-                              decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(4), 
-                              color: Color.fromARGB(102, 0, 0, 255),
-                              ),
-                               child: Text("2" , textAlign: TextAlign.center, style: TextStyle(
-                                color: Colors.white
-                                                           ),),
-                             ),
-                            SizedBox(width: 5,),
-                            Text("Não me sinto bem", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
-                          ],
-                       ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Row(
+                            children: [
+                               Container(
+                                alignment: Alignment.center,
+                                height: 20,
+                                width: 18,
+                                decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4), 
+                                color: Color.fromARGB(102, 0, 0, 255),
+                                ),
+                                 child: Text("2" , textAlign: TextAlign.center, style: TextStyle(
+                                  color: Colors.white
+                                                             ),),
+                               ),
+                              SizedBox(width: 5,),
+                              Text("Não me sinto bem", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
+                            ],
+                                                 ),
+                        ),
                        SizedBox(height: 5,),
-                        Row(
-                          children: [
-                             Container(
-                              alignment: Alignment.center,
-                              height: 20,
-                              width: 18,
-                              decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(4), 
-                              color: Color.fromARGB(255, 0, 0, 255),
-                              ),
-                               child: Text("1" , textAlign: TextAlign.center,style: TextStyle(
-                                color: Colors.white,),),
-                             ),
-                             SizedBox(width: 5,),
-                            Text("Me sinto mal", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
-                          ],
-                       ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Row(
+                            children: [
+                               Container(
+                                alignment: Alignment.center,
+                                height: 20,
+                                width: 18,
+                                decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4), 
+                                color: Color.fromARGB(255, 0, 0, 255),
+                                ),
+                                 child: Text("1" , textAlign: TextAlign.center,style: TextStyle(
+                                  color: Colors.white,),),
+                               ),
+                               SizedBox(width: 5,),
+                              Text("Me sinto mal", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
+                            ],
+                                                 ),
+                        ),
                       ],
                     ),
                   ),
-                  SizedBox(width: 20,),
+                  SizedBox(width: 16,),
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
@@ -163,8 +244,9 @@ class _HistoricoState extends State<Historico> {
                        crossAxisAlignment: CrossAxisAlignment.center,
                        mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                       Wrap(
-                          children: [
+                       Padding(
+                          padding: EdgeInsets.all(5),
+                          child: 
                             Column(
                               children: [
                                  Text("De acordo com o que foi sinalizado, você está bem!",textAlign: TextAlign.center, softWrap: true, style: TextStyle(
@@ -175,7 +257,6 @@ class _HistoricoState extends State<Historico> {
                                  ),)
                               ],
                             ),
-                          ],
                        ),
                       ],
                     ),
@@ -189,10 +270,23 @@ class _HistoricoState extends State<Historico> {
             child: Column(
               children: [
               SizedBox(height: 20,),
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: [Text("Últimos 10 dias", textAlign: TextAlign.center, style: TextStyle(color: const Color.fromARGB(100, 0, 0, 0)),)],), 
-              Table(
-                children: [],
-              )],
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: [Text("Últimos 10 dias", textAlign: TextAlign.center, style: TextStyle(color: const Color.fromARGB(130, 0, 0, 0), fontSize: 18),)],), 
+              SizedBox(height: 15,),
+              Center(
+                child: Table(
+                  border: TableBorder.all(
+                    color: Colors.white,
+                    width: 2
+                  ),
+                  children: <TableRow> [
+                    _tableRow,
+                    _tableRowData,
+                    _tableRowData,
+                    _tableRowData,
+                  ],
+                ),
+              )
+              ]
             ),
           )
         ],
