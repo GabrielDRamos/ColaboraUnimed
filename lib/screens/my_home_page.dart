@@ -1,25 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:secondapptest/widgets/home_button.dart';
 import 'checkin.dart';
-
 class MyHomePage extends StatefulWidget {
 
   const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
 
   final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
-
 class _MyHomePageState extends State<MyHomePage> {
   String? nome;
   
@@ -39,21 +29,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+  
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 230, 240, 236),
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
+       
         backgroundColor:const Color.fromARGB(255, 230, 240, 236),
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
+       
         title: Text(widget.title),
         centerTitle: true,
         automaticallyImplyLeading: false,
@@ -80,9 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-        ),
-
-        
+        ),    
       body: Container(
        padding: EdgeInsets.all(14),
        child: Column(
@@ -153,23 +133,3 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 
-class HomeButton extends StatelessWidget {
-final String nome;
-const HomeButton({ Key? key ,required this.nome}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context){
-    return Container(
-      child: ElevatedButton(style: ElevatedButton.styleFrom(
-        side: BorderSide(color: Colors.greenAccent, width: 1),
-        shadowColor: Color.fromARGB(255, 0, 0, 0),
-        elevation: 5,
-        padding: EdgeInsets.all(18),
-        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
-        foregroundColor: Colors.white,
-        minimumSize:  Size(280, 48),
-       ),onPressed: (){}, child: Text(nome)
-        ),
-    );
-  }
-}
