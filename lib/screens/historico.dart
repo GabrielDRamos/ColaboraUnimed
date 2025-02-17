@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secondapptest/widgets/bottom_nav_item.dart';
 
 
 class Historico extends StatefulWidget{
@@ -10,23 +11,11 @@ class Historico extends StatefulWidget{
 }
 
 class _HistoricoState extends State<Historico> {
-
-   Widget _buildNavItem(IconData icon) {
-          return Container(
-            width: 50, // Aumenta a área do toque
-            height: 50,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-            ),
-            child: Icon(icon, size: 40, color: Color.fromARGB(255, 0, 61, 37)),
-          );
-    }
   
   @override
   Widget build(BuildContext context) {
 
-   TableRow _tableRow = TableRow(
+   TableRow tableRow = TableRow(
     children: <Widget> [
       Container(
         decoration: BoxDecoration(
@@ -58,7 +47,7 @@ class _HistoricoState extends State<Historico> {
     ]
    );
 
-   TableRow _tableRowData = TableRow(
+   TableRow tableRowData = TableRow(
     children: <Widget> [
         Container(
         decoration: BoxDecoration(
@@ -117,10 +106,10 @@ class _HistoricoState extends State<Historico> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Centraliza os itens
                 children: [
-                  _buildNavItem(Icons.home),
-                  _buildNavItem(Icons.search),
-                  _buildNavItem(Icons.play_arrow),
-                  _buildNavItem(Icons.person),
+                  BottomNavItem(icon: Icons.home),
+                  BottomNavItem(icon: Icons.question_mark),
+                  BottomNavItem(icon: Icons.play_arrow),
+                  BottomNavItem(icon: Icons.person),
                 ],
               ),
             ),
@@ -316,10 +305,10 @@ class _HistoricoState extends State<Historico> {
                     width: 2
                   ),
                   children: <TableRow> [
-                    _tableRow,
-                    _tableRowData,
-                    _tableRowData,
-                    _tableRowData,
+                    tableRow,
+                    tableRowData,
+                    tableRowData,
+                    tableRowData,
                   ],
                 ),
               )

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:secondapptest/screens/historico.dart';
 import 'package:secondapptest/screens/login.dart';
 
 

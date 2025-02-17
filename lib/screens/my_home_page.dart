@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secondapptest/widgets/bottom_nav_item.dart';
 import 'package:secondapptest/widgets/home_button.dart';
 import 'checkin.dart';
 class MyHomePage extends StatefulWidget {
@@ -14,18 +15,6 @@ class _MyHomePageState extends State<MyHomePage> {
   String? nome;
   
   final List<String> emojis = ["☹", "🙁", "😐", "🙂", "😀"];
-
-  Widget _buildNavItem(IconData icon) {
-          return Container(
-            width: 50, // Aumenta a área do toque
-            height: 50,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-            ),
-            child: Icon(icon, size: 50, color: Color.fromARGB(255, 0, 61, 37)),
-          );
-    }
 
   @override
   Widget build(BuildContext context) {
@@ -54,10 +43,10 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Centraliza os itens
                 children: [
-                  _buildNavItem(Icons.home),
-                  _buildNavItem(Icons.question_mark),
-                  _buildNavItem(Icons.play_arrow),
-                  _buildNavItem(Icons.person),
+                  BottomNavItem(icon: Icons.home),
+                  BottomNavItem(icon: Icons.question_mark),
+                  BottomNavItem(icon: Icons.play_arrow),
+                  BottomNavItem(icon: Icons.person),
                 ],
               ),
             ),
