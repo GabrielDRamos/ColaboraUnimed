@@ -15,10 +15,10 @@ class BottomNavItem extends StatelessWidget {
           children: [
             FloatingActionButton.small(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=> MyHomePage(title: 'ColaboraUnimed')));
-            }, backgroundColor: Colors.white, child: Icon(Icons.home, color: Colors.green ,size: 40,)),
-            FloatingActionButton.small(onPressed: (){}, backgroundColor: Colors.white, child: Icon(Icons.edit_document, color: Colors.green ,size: 40,)),
-            FloatingActionButton.small(onPressed: (){}, backgroundColor: Colors.white, child: Icon(Icons.play_circle, color: Colors.green ,size: 40,)),
-            FloatingActionButton.small(onPressed: (){}, backgroundColor: Colors.white, child: Icon(Icons.person, color: Colors.green ,size: 40,)),
+            }, backgroundColor: Colors.white, child: Icon(Icons.home, color: Color.fromARGB(255, 0, 61, 37) ,size: 40,)),
+            FloatingActionButton.small(onPressed: (){}, backgroundColor: Colors.white, child: Icon(Icons.edit_document, color: Color.fromARGB(255, 0, 61, 37) ,size: 40,)),
+            FloatingActionButton.small(onPressed: (){}, backgroundColor: Colors.white, child: Icon(Icons.play_circle, color: Color.fromARGB(255, 0, 61, 37) ,size: 40,)),
+            FloatingActionButton.small(onPressed: (){}, backgroundColor: Colors.white, child: Icon(Icons.person, color: Color.fromARGB(255, 0, 61, 37) ,size: 40,)),
 
           ],
         )
