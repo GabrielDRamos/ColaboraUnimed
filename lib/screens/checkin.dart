@@ -81,7 +81,7 @@ class _CheckinState extends State<Checkin> {
               ElevatedButton(
                 
                 style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.all(16),
+                padding: EdgeInsets.all(10),
                 backgroundColor: Color.fromARGB(255, 0, 153, 93), // fundo verde // texto branco
                 minimumSize: const Size(200, 32),
                 shape: RoundedRectangleBorder(
@@ -101,7 +101,7 @@ class _CheckinState extends State<Checkin> {
               SizedBox(height: 14,),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.all(16),
+                padding: EdgeInsets.all(10),
                 backgroundColor: Color.fromARGB(255, 0, 153, 93),
                 minimumSize: const Size(200, 32),
                 shape: RoundedRectangleBorder(

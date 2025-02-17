@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Historico(title: "ColaboraUnimed"),
+      home: const Login(title: "ColaboraUnimed"),
       
     );
   }
