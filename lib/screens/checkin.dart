@@ -40,7 +40,7 @@ class _CheckinState extends State<Checkin> {
               textAlign: TextAlign.center, 
               style: TextStyle(
                 color: Color.fromARGB(255, 0, 153, 93) ,
-                fontSize: 14,
+                fontSize: 20,
                 fontWeight: FontWeight.bold
               ),),
             ),
@@ -54,7 +54,7 @@ class _CheckinState extends State<Checkin> {
               child: Container(
                   decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(bottomRight: Radius.circular(8), bottomLeft: Radius.circular(8)),
-                  color: Color.fromARGB(190, 23, 223, 143),
+                  color: Color.fromARGB(186, 3, 120, 73),
                   ),
                    width: double.infinity,
                   height: 64,
@@ -65,7 +65,7 @@ class _CheckinState extends State<Checkin> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Color.fromARGB(200, 239, 237, 237),
-                        fontSize: 16,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold
                       ),
                                   ),
@@ -79,7 +79,9 @@ class _CheckinState extends State<Checkin> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               ElevatedButton(
+                
                 style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.all(16),
                 backgroundColor: Color.fromARGB(255, 0, 153, 93), // fundo verde // texto branco
                 minimumSize: const Size(200, 32),
                 shape: RoundedRectangleBorder(
@@ -93,12 +95,13 @@ class _CheckinState extends State<Checkin> {
                 },
                 child: Text("Voltar a Home", style: TextStyle(
                   color: Colors.white,
-                  fontSize: 9
+                  fontSize: 16
                 ),),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 14,),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.all(16),
                 backgroundColor: Color.fromARGB(255, 0, 153, 93),
                 minimumSize: const Size(200, 32),
                 shape: RoundedRectangleBorder(
@@ -112,7 +115,7 @@ class _CheckinState extends State<Checkin> {
                 },
                 child: Text("Ver histórico", style: TextStyle(
                   color: Colors.white,
-                  fontSize: 9
+                  fontSize: 16
                 ),),
               ),
                SizedBox(height: 8,),

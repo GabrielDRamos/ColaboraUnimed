@@ -10,6 +10,18 @@ class Historico extends StatefulWidget{
 }
 
 class _HistoricoState extends State<Historico> {
+
+   Widget _buildNavItem(IconData icon) {
+          return Container(
+            width: 50, // Aumenta a área do toque
+            height: 50,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.white,
+            ),
+            child: Icon(icon, size: 40, color: Color.fromARGB(255, 0, 61, 37)),
+          );
+    }
   
   @override
   Widget build(BuildContext context) {
@@ -91,6 +103,29 @@ class _HistoricoState extends State<Historico> {
         centerTitle: true,
         automaticallyImplyLeading: false,
       ),
+        bottomNavigationBar: ClipRRect(
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(0),
+            topRight: Radius.circular(0),
+            bottomLeft: Radius.circular(0),
+            bottomRight: Radius.circular(0),
+          ),
+          child: SizedBox(
+            height: 75,
+            child: BottomAppBar(
+              color: Color.fromARGB(255, 0, 61, 37),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Centraliza os itens
+                children: [
+                  _buildNavItem(Icons.home),
+                  _buildNavItem(Icons.search),
+                  _buildNavItem(Icons.play_arrow),
+                  _buildNavItem(Icons.person),
+                ],
+              ),
+            ),
+          ),
+        ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -107,18 +142,20 @@ class _HistoricoState extends State<Historico> {
               ],),
               SizedBox(height: 20,),
               Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     width: 160,
-                    height: 145,
+                    height: 160,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                      color: const Color.fromARGB(53, 0, 153, 92),
                     ),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                       Row(mainAxisAlignment: MainAxisAlignment.center,  children: [Text("Legenda", style: TextStyle(
+                       Row( mainAxisAlignment: MainAxisAlignment.center,  children: [Text("Legenda", style: TextStyle(
                         fontWeight: FontWeight.bold
                        ),)]),
                        Padding(
@@ -239,7 +276,7 @@ class _HistoricoState extends State<Historico> {
                       color: Color.fromARGB(255, 0, 153, 93)
                     ),
                     width: 120,
-                    height: 145,
+                    height: 160,
                     child: Column(
                        crossAxisAlignment: CrossAxisAlignment.center,
                        mainAxisAlignment: MainAxisAlignment.center,
