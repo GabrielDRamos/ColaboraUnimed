@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:secondapptest/screens/historico.dart';
 import 'package:secondapptest/screens/my_home_page.dart';
 import 'package:secondapptest/widgets/bottom_nav_item.dart';
+import 'package:secondapptest/widgets/alert_dialogo.dart';
 
 class Checkin extends StatefulWidget {
   const Checkin({super.key, required this.title});
@@ -14,13 +15,12 @@ class Checkin extends StatefulWidget {
 
 class _CheckinState extends State<Checkin> {
   String? selectedOption;
-
   List<String> emojis = ["☹", "🙁", "😐", "🙂", "😀"];
 
 
   void _handleCheckBoxChange(String value){
     setState(() {
-      selectedOption == value;
+      selectedOption = value;
     });
   }
 
@@ -155,7 +155,7 @@ class _CheckinState extends State<Checkin> {
         shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8), // Borda arredondada
       ),
-       ), child: Text('Enviar'), onPressed: () => AlertDialog(),),
+       ), child: Text('Enviar'), onPressed: () => AlertDialogo.showCheckinDialog(context),),
           ],
         ),
 

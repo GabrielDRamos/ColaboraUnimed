@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:secondapptest/screens/historico.dart';
 import 'package:secondapptest/screens/my_home_page.dart';
 
-class AlertDialogo {
+class AlertDialogo{
 
- void _showCheckinDialog(BuildContext context) {
-    
+ static void showCheckinDialog(BuildContext context) {
     showDialog(
     context: context, 
     barrierDismissible: false,
     builder: (_) {
       return AlertDialog(
-        backgroundColor: Color.fromARGB(0, 0, 0, 0),
+        backgroundColor: Colors.transparent,
         contentPadding: EdgeInsets.zero,
         content: Column(
           mainAxisSize: MainAxisSize.min,
