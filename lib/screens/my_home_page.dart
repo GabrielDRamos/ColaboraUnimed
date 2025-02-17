@@ -29,29 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         automaticallyImplyLeading: false,
       ),
-      bottomNavigationBar: ClipRRect(
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(0),
-            topRight: Radius.circular(0),
-            bottomLeft: Radius.circular(0),
-            bottomRight: Radius.circular(0),
-          ),
-          child: SizedBox(
-            height: 75,
-            child: BottomAppBar(
-              color: Color.fromARGB(255, 0, 61, 37),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Centraliza os itens
-                children: [
-                  BottomNavItem(icon: Icons.home),
-                  BottomNavItem(icon: Icons.question_mark),
-                  BottomNavItem(icon: Icons.play_arrow),
-                  BottomNavItem(icon: Icons.person),
-                ],
-              ),
-            ),
-          ),
-        ),    
+      bottomNavigationBar: BottomNavItem(),
       body: Container(
        padding: EdgeInsets.all(14),
        child: Column(

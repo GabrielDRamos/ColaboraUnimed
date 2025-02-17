@@ -40,29 +40,7 @@ class _CheckinState extends State<Checkin> {
        // icon: Image.asset('lib/assets/icons/heart-regular.svg', width: 24, height: 24,)) => resolver erro
       ),
 
-       bottomNavigationBar: ClipRRect(
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(0),
-            topRight: Radius.circular(0),
-            bottomLeft: Radius.circular(0),
-            bottomRight: Radius.circular(0),
-          ),
-          child: SizedBox(
-            height: 75,
-            child: BottomAppBar(
-              color: Color.fromARGB(255, 0, 61, 37),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Centraliza os itens
-                children: [
-                  BottomNavItem(icon: Icons.home),
-                  BottomNavItem(icon: Icons.question_mark),
-                  BottomNavItem(icon: Icons.play_arrow),
-                  BottomNavItem(icon: Icons.person),
-                ],
-              ),
-            ),
-          ),
-        ),
+       bottomNavigationBar: BottomNavItem(),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
@@ -74,7 +52,7 @@ class _CheckinState extends State<Checkin> {
                 Text("Como você está agora emocional e fisicamente?"),
               ],
             ),
-            SizedBox(height: 50,),
+            SizedBox(height: 20,),
             Column(
               children: [
               Container(
@@ -87,7 +65,7 @@ class _CheckinState extends State<Checkin> {
                 ),),
               ),
               ),
-              SizedBox(height: 15,),
+              SizedBox(height: 10,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: emojis.map((emoji) => Text(emoji, style: TextStyle(
@@ -109,11 +87,10 @@ class _CheckinState extends State<Checkin> {
             )
             ]
             ),
-            SizedBox(height: 20,),
+            SizedBox(height: 15,),
              Column(
               children: [
               Container(
-              
               width: 350,
               color: const Color.fromARGB(51, 95, 248, 187) ,
               child:   Center(
@@ -145,7 +122,7 @@ class _CheckinState extends State<Checkin> {
             ]
             ),
            
-        SizedBox(height: 100),
+        SizedBox(height: 50),
         ElevatedButton(style: ElevatedButton.styleFrom(
         shadowColor: Color.fromARGB(255, 0, 0, 0),
         elevation: 5,

@@ -82,39 +82,12 @@ class _HistoricoState extends State<Historico> {
    return Scaffold(
     backgroundColor: const Color.fromARGB(255, 230, 240, 236),
       appBar: AppBar(
-         // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
         backgroundColor:const Color.fromARGB(255, 230, 240, 236),
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
         title: Text("ColaboraUnimed"),
         centerTitle: true,
         automaticallyImplyLeading: false,
       ),
-        bottomNavigationBar: ClipRRect(
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(0),
-            topRight: Radius.circular(0),
-            bottomLeft: Radius.circular(0),
-            bottomRight: Radius.circular(0),
-          ),
-          child: SizedBox(
-            height: 75,
-            child: BottomAppBar(
-              color: Color.fromARGB(255, 0, 61, 37),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Centraliza os itens
-                children: [
-                  BottomNavItem(icon: Icons.home),
-                  BottomNavItem(icon: Icons.question_mark),
-                  BottomNavItem(icon: Icons.play_arrow),
-                  BottomNavItem(icon: Icons.person),
-                ],
-              ),
-            ),
-          ),
-        ),
+        bottomNavigationBar: BottomNavItem(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

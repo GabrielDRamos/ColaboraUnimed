@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
 
 class BottomNavItem extends StatelessWidget {
-final IconData icon;
-const BottomNavItem({ super.key , required this.icon});
+  const BottomNavItem({super.key});
 
   @override
   Widget build(BuildContext context) {
-          return Container(
-            width: 50, // Aumenta a área do toque
-            height: 50,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-            ),
-            child: Icon(icon, size: 50, color: Color.fromARGB(255, 0, 61, 37)),
-          );
-    }
+    return Container(
+        color: Color.fromARGB(255, 0, 61, 37),
+      height: 85,
+       child: Row(
+         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            FloatingActionButton.small(onPressed: (){}, backgroundColor: Colors.white, child: Icon(Icons.home, color: Colors.green ,size: 40,)),
+            FloatingActionButton.small(onPressed: (){}, backgroundColor: Colors.white, child: Icon(Icons.edit_document, color: Colors.green ,size: 40,)),
+            FloatingActionButton.small(onPressed: (){}, backgroundColor: Colors.white, child: Icon(Icons.play_circle, color: Colors.green ,size: 40,)),
+            FloatingActionButton.small(onPressed: (){}, backgroundColor: Colors.white, child: Icon(Icons.person, color: Colors.green ,size: 40,)),
+
+          ],
+        )
+    );
+  }
 }
