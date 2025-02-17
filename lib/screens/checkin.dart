@@ -36,6 +36,7 @@ class _CheckinState extends State<Checkin> {
           fontWeight: FontWeight.bold
         ),),
         centerTitle: true,
+       automaticallyImplyLeading: false,
        // leading: IconButton(onPressed: () => "fon" , 
        // icon: Image.asset('lib/assets/icons/heart-regular.svg', width: 24, height: 24,)) => resolver erro
       ),
