@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Container(
              height: 120,
-             width: 350,
+             width: 300,
              decoration: BoxDecoration(
               color: const Color.fromARGB(53, 0, 153, 92),
               borderRadius: BorderRadius.circular(15),
@@ -85,13 +85,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     fontSize: 12,
                     color: Colors.black,
                   ),),
-                  Container(
-                    child: Row(
+                   Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: emojis.map((emoji) {
                         return GestureDetector(
                           onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => const Checkin(title: "laksjdsalk")),);
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const Checkin(title: "ColaboraUnimed")),);
                           },
                           child: Text(
                             emoji,
@@ -100,7 +99,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       }).toList()
                     ),
-                  ),
                   Text("Faça seu check-in",  style: TextStyle(
                     fontSize: 18,
                     color: Colors.black,

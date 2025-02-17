@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class HomeButton extends StatelessWidget {
 final String nome;
-const HomeButton({ Key? key ,required this.nome}) : super(key: key);
+const HomeButton({ super.key ,required this.nome});
 
   @override
   Widget build(BuildContext context){

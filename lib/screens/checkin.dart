@@ -155,8 +155,8 @@ class _CheckinState extends State<Checkin> {
           fontWeight: FontWeight.bold
         ),),
         centerTitle: true,
-        leading: IconButton(onPressed: () => "fon" , 
-        icon: Image.asset('lib/assets/icons/heart-regular.svg', width: 24, height: 24,))
+       // leading: IconButton(onPressed: () => "fon" , 
+       // icon: Image.asset('lib/assets/icons/heart-regular.svg', width: 24, height: 24,)) => resolver erro
       ),
 
        bottomNavigationBar: ClipRRect(

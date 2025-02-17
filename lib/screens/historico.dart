@@ -34,7 +34,10 @@ class _HistoricoState extends State<Historico> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                Text("Histórico Emocional")
+                Text("Histórico Emocional", style: TextStyle(
+                  color: const Color.fromARGB(255, 0, 153, 93),
+                  fontWeight: FontWeight.bold
+                ),)
               ],),
               SizedBox(height: 20,),
               Row(
@@ -42,51 +45,134 @@ class _HistoricoState extends State<Historico> {
                 children: [
                   Container(
                     width: 160,
+                    height: 145,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                     color: const Color.fromARGB(53, 0, 153, 92),
+                    ),
                     child: Column(
                       children: [
+                       Row(mainAxisAlignment: MainAxisAlignment.center,  children: [Text("Legenda", style: TextStyle(
+                        fontWeight: FontWeight.bold
+                       ),)]),
                        Row(
                           children: [
-                            Text("5"),
-                            Text("Me sinto ótimo(a)")
+                            Container(
+                              alignment: Alignment.center,
+                              height: 20,
+                              width: 18,
+                              decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(4), 
+                              color: Color.fromARGB(255,0, 153, 89),
+                              ),
+                              child: Text("5 " ,textAlign: TextAlign.center, style: TextStyle(
+                                color: Colors.white
+                              ),),
+                            ),
+                            SizedBox(width: 5,),
+                            Text("Me sinto ótimo(a)", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
                           ],
                        ),
+                       SizedBox(height: 5,),
                         Row(
                           children: [
-                            Text("4"),
-                            Text("Me sinto bem")
+                             Container(
+                              alignment: Alignment.center,
+                              height: 20,
+                              width: 18,
+                              decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(4), 
+                              color: Color.fromARGB(103, 0, 153, 89),
+                              ),
+                               child: Text("4 " , textAlign: TextAlign.center, style: TextStyle(
+                                color: Colors.white
+                                                           ),),
+                             ),
+                             SizedBox(width: 5,),
+                            Text("Me sinto bem", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
                           ],
                        ),
+                       SizedBox(height: 5,),
                         Row(
                           children: [
-                            Text("3"),
-                            Text("Me sinto neutro")
+                            Container(
+                              alignment: Alignment.center,
+                              height: 20,
+                              width: 18,
+                              decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(4), 
+                              color: Color.fromARGB(255,128, 128, 128),
+                              ),
+                              child: Text("3 " , textAlign: TextAlign.center, style: TextStyle( 
+                                color: Colors.white
+                              ),),
+                            ),
+                            SizedBox(width: 5,),
+                            Text("Me sinto neutro", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
                           ],
                        ),
+                       SizedBox(height: 5,),
                         Row(
                           children: [
-                            Text("2"),
-                            Text("Não me sinto bem")
+                             Container(
+                              alignment: Alignment.center,
+                              height: 20,
+                              width: 18,
+                              decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(4), 
+                              color: Color.fromARGB(102, 0, 0, 255),
+                              ),
+                               child: Text("2" , textAlign: TextAlign.center, style: TextStyle(
+                                color: Colors.white
+                                                           ),),
+                             ),
+                            SizedBox(width: 5,),
+                            Text("Não me sinto bem", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
                           ],
                        ),
+                       SizedBox(height: 5,),
                         Row(
                           children: [
-                            Text("1"),
-                            Text("Me mal")
+                             Container(
+                              alignment: Alignment.center,
+                              height: 20,
+                              width: 18,
+                              decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(4), 
+                              color: Color.fromARGB(255, 0, 0, 255),
+                              ),
+                               child: Text("1" , textAlign: TextAlign.center,style: TextStyle(
+                                color: Colors.white,),),
+                             ),
+                             SizedBox(width: 5,),
+                            Text("Me sinto mal", style: TextStyle(color: const Color.fromARGB(135, 0, 0, 0)), )
                           ],
-                       )
+                       ),
                       ],
                     ),
                   ),
+                  SizedBox(width: 20,),
                   Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Color.fromARGB(255, 0, 153, 93)
+                    ),
                     width: 120,
+                    height: 145,
                     child: Column(
+                       crossAxisAlignment: CrossAxisAlignment.center,
+                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                        Wrap(
                           children: [
                             Column(
                               children: [
-                                 Text("De acordo com o que foi sinalizado, você está bem!", softWrap: true),
-                                 Text("Continue!", softWrap: true,)
+                                 Text("De acordo com o que foi sinalizado, você está bem!",textAlign: TextAlign.center, softWrap: true, style: TextStyle(
+                                  color: Colors.white
+                                 ),),
+                                 Text("Continue!", softWrap: true,textAlign: TextAlign.center, style: TextStyle(
+                                  color: Colors.white
+                                 ),)
                               ],
                             ),
                           ],
@@ -97,7 +183,18 @@ class _HistoricoState extends State<Historico> {
                 ],
               ),
             ],
-          ),
+          ), // antes da tabela
+          SizedBox(
+            width: 300,
+            child: Column(
+              children: [
+              SizedBox(height: 20,),
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: [Text("Últimos 10 dias", textAlign: TextAlign.center, style: TextStyle(color: const Color.fromARGB(100, 0, 0, 0)),)],), 
+              Table(
+                children: [],
+              )],
+            ),
+          )
         ],
       ),
    );

@@ -4,25 +4,13 @@ import 'package:secondapptest/screens/my_home_page.dart';
 class Login extends StatefulWidget {
   
   const Login({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
   final String title;
-
-
   @override
   _LoginPageState createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<Login>{
-  
+
 
   void _login() {
       Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage(title: "ColaboraUnimed")));
@@ -55,13 +43,17 @@ class _LoginPageState extends State<Login>{
                     ), "Realize o Login no aplicativo usando a sua matrícula e senha")
                     ),
                     SizedBox(height: 25),
-                    TextFormField(
-                      decoration: InputDecoration(labelText: "Digite sua matrícula", filled: true, fillColor: Color.fromARGB(255, 255, 255, 255), border: InputBorder.none),
-                      keyboardType: TextInputType.number,
+                    SingleChildScrollView(
+                      child: TextFormField(
+                        decoration: InputDecoration(labelText: "Digite sua matrícula", filled: true, fillColor: Color.fromARGB(255, 255, 255, 255), border: InputBorder.none),
+                        keyboardType: TextInputType.number,
+                      ),
                     ),
                     SizedBox(height: 20),
-                    TextFormField(decoration: InputDecoration(labelText: "Digite sua senha",  filled: true, fillColor: Color.fromARGB(255, 255, 255, 255), border: InputBorder.none),
-                    obscureText: true, ),
+                    SingleChildScrollView(
+                      child: TextFormField(decoration: InputDecoration(labelText: "Digite sua senha",  filled: true, fillColor: Color.fromARGB(255, 255, 255, 255), border: InputBorder.none),
+                      obscureText: true, ),
+                    ),
                     SizedBox(height: 5),
                     Align(
                       alignment: Alignment.centerLeft,
