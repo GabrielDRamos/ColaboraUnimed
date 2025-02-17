@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'checkin.dart';
 
 class MyHomePage extends StatefulWidget {
+
   const MyHomePage({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -20,6 +21,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String? nome;
   
   final List<String> emojis = ["☹", "🙁", "😐", "🙂", "😀"];
 
@@ -130,68 +132,44 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
         SizedBox(height: 40),
-        ElevatedButton(style: ElevatedButton.styleFrom(
-        side: BorderSide(color: Colors.greenAccent, width: 1),
-        shadowColor: Color.fromARGB(255, 0, 0, 0),
-        elevation: 5,
-        padding: EdgeInsets.all(18),
-        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
-        foregroundColor: Colors.white,
-        minimumSize: Size(280, 48),
-       ), child: Text('Comprometimento', style: TextStyle(fontSize: 18),), onPressed: () => 'salve',),
+       
+       HomeButton(nome: "Comprometimento"),
        SizedBox(height: 10),
-        ElevatedButton(style: ElevatedButton.styleFrom(
-        side: BorderSide(color: Colors.greenAccent, width: 1),
-        shadowColor: Color.fromARGB(255, 0, 0, 0),
-        elevation: 5,
-        padding: EdgeInsets.all(18),
-        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
-        foregroundColor: Colors.white,
-        minimumSize:  Size(280, 48),
-       ), child: Text('Escolha Premiada', style: TextStyle(fontSize: 18)), onPressed: () => 'salve',),
+       HomeButton(nome: "Escolha Premiada"),
        SizedBox(height: 10),
-        ElevatedButton(style: ElevatedButton.styleFrom(
-        side: BorderSide(color: Colors.greenAccent, width: 1),
-        shadowColor: Color.fromARGB(255, 0, 0, 0),
-        elevation: 5,
-        padding: EdgeInsets.all(18),
-        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
-        foregroundColor: Colors.white,
-        minimumSize:  Size(280, 48),
-       ), child: Text('Ranking',style: TextStyle(fontSize: 18) ), onPressed: () => 'salve',),
+       HomeButton(nome: "Ranking"),
        SizedBox(height: 10),
-        ElevatedButton(style: ElevatedButton.styleFrom(
-        side: BorderSide(color: Colors.greenAccent, width: 1),
-        shadowColor: Color.fromARGB(255, 0, 0, 0),
-        elevation: 5,
-        padding: EdgeInsets.all(18),
-        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
-        foregroundColor: Colors.white,
-        minimumSize:  Size(280, 48),
-       ), child: Text('Desafio Mensal', style: TextStyle(fontSize: 18) ), onPressed: () => 'salve',),
+       HomeButton(nome: "Desafio Mensal"),
        SizedBox(height: 10),
-        ElevatedButton(style: ElevatedButton.styleFrom(
-        side: BorderSide(color: Colors.greenAccent, width: 1),
-        shadowColor: Color.fromARGB(255, 0, 0, 0),
-        elevation: 5,
-        padding: EdgeInsets.all(18),
-        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
-        foregroundColor: Colors.white,
-        minimumSize:  Size(280, 48),
-       ), child: Text('Reconhecimento', style: TextStyle(fontSize: 18) ), onPressed: () => 'salve',),
+       HomeButton(nome: "Reconhecimento"),
        SizedBox(height: 10),
-        ElevatedButton(style: ElevatedButton.styleFrom(
-        side: BorderSide(color: Colors.greenAccent, width: 1),
-        shadowColor: Color.fromARGB(255, 0, 0, 0),
-        elevation: 5,
-        padding: EdgeInsets.all(18),
-        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
-        foregroundColor: Colors.white,
-        minimumSize:  Size(280, 48),
-       ), child: Text('Inovação & Você', style: TextStyle(fontSize: 18) ), onPressed: () => 'salve',),
+       HomeButton(nome: "Inovação & Você"),
        ] 
        ) 
-    )
+    ),
+  
   );
+  }
+}
+
+
+class HomeButton extends StatelessWidget {
+final String nome;
+const HomeButton({ Key? key ,required this.nome}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context){
+    return Container(
+      child: ElevatedButton(style: ElevatedButton.styleFrom(
+        side: BorderSide(color: Colors.greenAccent, width: 1),
+        shadowColor: Color.fromARGB(255, 0, 0, 0),
+        elevation: 5,
+        padding: EdgeInsets.all(18),
+        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
+        foregroundColor: Colors.white,
+        minimumSize:  Size(280, 48),
+       ),onPressed: (){}, child: Text(nome)
+        ),
+    );
   }
 }
