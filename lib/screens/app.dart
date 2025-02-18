@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:secondapptest/colors.dart';
 import 'package:secondapptest/screens/login.dart';
 
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -14,7 +13,6 @@ class MyApp extends StatelessWidget {
       theme: kUnimedTheme,
       debugShowCheckedModeBanner: false,
       home: const Login(title: "ColaboraUnimed"),
-      
     );
   }
 }
