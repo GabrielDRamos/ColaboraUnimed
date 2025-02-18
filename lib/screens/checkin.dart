@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:secondapptest/screens/historico.dart';
-import 'package:secondapptest/screens/my_home_page.dart';
 import 'package:secondapptest/widgets/app_bar_item.dart';
 import 'package:secondapptest/widgets/bottom_nav_item.dart';
 import 'package:secondapptest/widgets/alert_dialogo.dart';
@@ -15,13 +13,27 @@ class Checkin extends StatefulWidget {
 }
 
 class _CheckinState extends State<Checkin> {
-  String? selectedOption;
+  String? selectedOptionEmotional, selectedOptionFisic ;
   List<String> emojis = ["☹", "🙁", "😐", "🙂", "😀"];
+  List<Color> colorsCheckBox = [
+    Color.fromARGB(255, 0, 0, 139 ),
+    Color.fromARGB(130,0, 0, 255),
+    Color.fromARGB(255,128, 128, 128),
+    Color.fromARGB(130, 0, 153, 93),
+    Color.fromARGB(255,0, 153, 93),
+  ];
+
 
 
   void _handleCheckBoxChange(String value){
     setState(() {
-      selectedOption = value;
+      selectedOptionEmotional = value;
+    });
+  }
+
+  void _handleCheckBoxFisicChange(String value){
+    setState(() {
+      selectedOptionFisic = value;
     });
   }
 
@@ -71,15 +83,23 @@ class _CheckinState extends State<Checkin> {
               ),
                Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-               children: emojis.map((emoji) {
+               children: List.generate(emojis.length, (index) {
                 return Checkbox(
-                  value: selectedOption == emoji,
+                  side: BorderSide(
+                    color: colorsCheckBox[index],
+                    width: 2
+
+                  ),
+                  value: selectedOptionEmotional == emojis[index],
+
                   onChanged: (bool? checked) {
                     if (checked == true) {
-                      _handleCheckBoxChange(emoji);
+                      _handleCheckBoxChange(emojis[index]);
                     }
                   },
                 );
+
+
               }).toList(),
             )
             ]
@@ -105,12 +125,16 @@ class _CheckinState extends State<Checkin> {
               ),
                Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-               children: emojis.map((emoji) {
+               children: List.generate(emojis.length, (index) {
                 return Checkbox(
-                  value: selectedOption == emoji,
+                  side: BorderSide(
+                    color: colorsCheckBox[index],
+                    width: 2,
+                  ),
+                  value: selectedOptionFisic == emojis[index],
                   onChanged: (bool? checked) {
                     if (checked == true) {
-                      _handleCheckBoxChange(emoji);
+                      _handleCheckBoxFisicChange(emojis[index]);
                     }
                   },
                 );
