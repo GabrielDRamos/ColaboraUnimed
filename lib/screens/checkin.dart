@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:secondapptest/screens/historico.dart';
 import 'package:secondapptest/screens/my_home_page.dart';
+import 'package:secondapptest/widgets/app_bar_item.dart';
 import 'package:secondapptest/widgets/bottom_nav_item.dart';
 import 'package:secondapptest/widgets/alert_dialogo.dart';
 
@@ -29,26 +30,21 @@ class _CheckinState extends State<Checkin> {
   Widget build(BuildContext context) {
    return Scaffold(
        backgroundColor: Color.fromARGB(255, 230, 240, 236),
-       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 230, 240, 236),
-        title: Text("Checkin", style: TextStyle(
-          color: const Color.fromARGB(255, 0, 153, 93),
-          fontWeight: FontWeight.bold
-        ),),
-        centerTitle: true,
-       automaticallyImplyLeading: false,
-       // leading: IconButton(onPressed: () => "fon" , 
-       // icon: Image.asset('lib/assets/icons/heart-regular.svg', width: 24, height: 24,)) => resolver erro
-      ),
-
+       appBar: AppBarItem(),
        bottomNavigationBar: BottomNavItem(),
-      body: Padding(
+       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                Text("Checkin", style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  color: Color.fromARGB(255, 0, 153, 93),
+                ),),
                 Text("Gostaríamos de cuidar de você, nos ajude!"),
                 Text("Como você está agora emocional e fisicamente?"),
               ],

@@ -62,6 +62,7 @@ flutter:
   assets:
     - lib/assets/unimed.png
     - lib/assets/icons/heart-regular.svg
+    - lib/assets/Vector.png
 
   #   - images/a_dot_ham.jpeg
 flutter_native_splash:

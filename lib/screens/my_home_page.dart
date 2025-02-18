@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secondapptest/widgets/app_bar_item.dart';
 import 'package:secondapptest/widgets/bottom_nav_item.dart';
 import 'package:secondapptest/widgets/home_button.dart';
 import 'checkin.dart';
@@ -21,14 +22,7 @@ class _MyHomePageState extends State<MyHomePage> {
   
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 230, 240, 236),
-      appBar: AppBar(
-       
-        backgroundColor:const Color.fromARGB(255, 230, 240, 236),
-       
-        title: Text(widget.title),
-        centerTitle: true,
-        automaticallyImplyLeading: false,
-      ),
+      appBar: AppBarItem(),
       bottomNavigationBar: BottomNavItem(),
       body: Container(
        padding: EdgeInsets.all(14),

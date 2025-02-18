@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secondapptest/widgets/app_bar_item.dart';
 import 'package:secondapptest/widgets/bottom_nav_item.dart';
 
 
@@ -81,12 +82,7 @@ class _HistoricoState extends State<Historico> {
 
    return Scaffold(
     backgroundColor: const Color.fromARGB(255, 230, 240, 236),
-      appBar: AppBar(
-        backgroundColor:const Color.fromARGB(255, 230, 240, 236),
-        title: Text("ColaboraUnimed"),
-        centerTitle: true,
-        automaticallyImplyLeading: false,
-      ),
+      appBar: AppBarItem(),
         bottomNavigationBar: BottomNavItem(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
