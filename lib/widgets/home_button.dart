@@ -12,7 +12,7 @@ const HomeButton({ super.key ,required this.nome});
         shadowColor: Color.fromARGB(255, 0, 0, 0),
         elevation: 5,
         padding: EdgeInsets.all(18),
-        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
+        backgroundColor: Theme.of(context).colorScheme.onPrimary,
         foregroundColor: Colors.white,
         minimumSize:  Size(280, 48),
        ),onPressed: (){}, child: Text(nome)

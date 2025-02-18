@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secondapptest/colors.dart';
 import 'package:secondapptest/screens/login.dart';
 
 
@@ -10,14 +11,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        fontFamily: 'Noto' ,
-        
-        useMaterial3: true,
-      ),
+      theme: kUnimedTheme,
       debugShowCheckedModeBanner: false,
       home: const Login(title: "ColaboraUnimed"),
       
     );
   }
+}
+
+final ThemeData kUnimedTheme = buildUnimedTheme();
+
+ThemeData buildUnimedTheme() {
+  final ThemeData base = ThemeData.light();
+  return base.copyWith(
+    colorScheme: base.colorScheme.copyWith(
+      primary: kUnimedGreen50,
+      onPrimary: kUnimedGreen500,
+      secondary: kUnimedGray,
+    ),
+  );
 }

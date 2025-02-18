@@ -20,7 +20,7 @@ class _HistoricoState extends State<Historico> {
     children: <Widget> [
       Container(
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 0, 153, 93)
+          color: Theme.of(context).colorScheme.onPrimary
         ),
         child: Padding(padding: EdgeInsets.all(2.0), child: Text("Data",textAlign: TextAlign.center ,style: TextStyle(
           color: Colors.white
@@ -29,7 +29,7 @@ class _HistoricoState extends State<Historico> {
 
          Container(
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 0, 153, 93)
+          color: Theme.of(context).colorScheme.onPrimary
         ),
         child: Padding(padding: EdgeInsets.all(2.0), child: Text("Entrada", textAlign: TextAlign.center,style: TextStyle(
           color: Colors.white
@@ -38,7 +38,7 @@ class _HistoricoState extends State<Historico> {
 
          Container(
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 0, 153, 93)
+          color: Theme.of(context).colorScheme.onPrimary
         ),
         child: Padding(padding: EdgeInsets.all(2.0), child: Text("Saída",textAlign: TextAlign.center ,style: TextStyle(
           color: Colors.white
@@ -93,7 +93,7 @@ class _HistoricoState extends State<Historico> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                 Text("Histórico Emocional", style: TextStyle(
-                  color: const Color.fromARGB(255, 0, 153, 93),
+                  color: Theme.of(context).colorScheme.onPrimary,
                   fontSize: 18,
                   fontWeight: FontWeight.bold
                 ),)
@@ -108,7 +108,7 @@ class _HistoricoState extends State<Historico> {
                     height: 160,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                     color: const Color.fromARGB(53, 0, 153, 92),
+                     color: Theme.of(context).colorScheme.primary,
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,

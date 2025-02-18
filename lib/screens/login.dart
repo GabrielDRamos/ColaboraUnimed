@@ -20,9 +20,9 @@ class _LoginPageState extends State<Login>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 230, 240, 236),
+      backgroundColor: Theme.of(context).colorScheme.secondary,
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 230, 240, 236),
+        backgroundColor: Theme.of(context).colorScheme.secondary,
         title: Text("ColaboraUnimed"),
         centerTitle: true,
       ),
@@ -61,7 +61,7 @@ class _LoginPageState extends State<Login>{
                     "Esqueceu sua senha?", 
                     style: TextStyle(
                       fontSize: 14,
-                     color: Color.fromARGB(255, 0, 153, 92) ,
+                     color: Theme.of(context).colorScheme.onPrimary,
                     ),),
                     ), 
                     SizedBox(height: 20),
@@ -70,7 +70,7 @@ class _LoginPageState extends State<Login>{
                     style: ElevatedButton.styleFrom(
                       shadowColor: Color.fromARGB(255, 0, 0, 0),
                       elevation: 5,
-                      backgroundColor: Color.fromARGB(255, 0, 153, 92),
+                      backgroundColor: Theme.of(context).colorScheme.onPrimary,
                       foregroundColor: Colors.white,
                       padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
                       shape: RoundedRectangleBorder(

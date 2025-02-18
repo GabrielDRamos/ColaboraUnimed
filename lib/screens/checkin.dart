@@ -66,10 +66,10 @@ class _CheckinState extends State<Checkin> {
               children: [
               Container(
               width: 340,
-              color: const Color.fromARGB(51, 95, 248, 187) ,
+              color: Theme.of(context).colorScheme.primary ,
               child:  Center(
                 child: Text("Emocionalmente", style: TextStyle(
-                  color: Color.fromARGB(255, 0, 153, 93),
+                  color: Theme.of(context).colorScheme.onPrimary,
                   fontSize: 16,
                 ),),
               ),
@@ -109,10 +109,10 @@ class _CheckinState extends State<Checkin> {
               children: [
               Container(
               width: 350,
-              color: const Color.fromARGB(51, 95, 248, 187) ,
+              color: Theme.of(context).colorScheme.primary ,
               child:   Center(
                 child: Text("Fisicamente", style: TextStyle(
-                  color: Color.fromARGB(255, 0, 153, 93),
+                  color: Theme.of(context).colorScheme.onPrimary,
                   fontSize: 16,
                 ),),
               ),
@@ -147,7 +147,7 @@ class _CheckinState extends State<Checkin> {
         ElevatedButton(style: ElevatedButton.styleFrom(
         shadowColor: Color.fromARGB(255, 0, 0, 0),
         elevation: 5,
-        backgroundColor: const Color.fromARGB(255, 0, 153, 93),
+        backgroundColor: Theme.of(context).colorScheme.onPrimary,
         foregroundColor: Colors.white,
         minimumSize:  Size(180, 42),
         shape: RoundedRectangleBorder(
