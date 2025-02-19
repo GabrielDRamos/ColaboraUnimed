@@ -5,10 +5,10 @@ class Login extends StatefulWidget {
   const Login({super.key, required this.title});
   final String title;
   @override
-  _LoginPageState createState() => _LoginPageState();
+  LoginPageState createState() => LoginPageState();
 }
 
-class _LoginPageState extends State<Login> {
+class LoginPageState extends State<Login> {
   void _login() {
     Navigator.push(
         context,

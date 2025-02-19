@@ -28,7 +28,7 @@ class AlertDialogo{
               textAlign: TextAlign.center, 
               style: TextStyle(
                 color: Color.fromARGB(255, 0, 153, 93) ,
-                fontSize: 20,
+                fontSize: 18,
                 fontWeight: FontWeight.bold
               ),),
             ),
@@ -53,7 +53,7 @@ class AlertDialogo{
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Color.fromARGB(200, 239, 237, 237),
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold
                       ),
                                   ),
