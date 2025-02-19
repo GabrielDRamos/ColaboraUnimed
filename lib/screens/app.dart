@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:secondapptest/colors.dart';
 import 'package:secondapptest/screens/login.dart';
+import 'package:secondapptest/screens/perfil.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: kUnimedTheme,
       debugShowCheckedModeBanner: false,
-      home: const Login(title: "ColaboraUnimed"),
+      home: const Perfil(),
     );
   }
 }
