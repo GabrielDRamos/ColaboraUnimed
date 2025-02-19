@@ -34,8 +34,8 @@ class Perfil extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: 60,
-                    height: 60,
+                    width: 70,
+                    height: 70,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
@@ -44,7 +44,7 @@ class Perfil extends StatelessWidget {
                     ),
                     child: Icon(
                       Icons.person_4,
-                      size: 35,
+                      size: 45,
                       color: Color.fromRGBO(0, 61, 37, 1),
                     ),
                   ),
