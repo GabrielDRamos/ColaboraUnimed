@@ -78,8 +78,7 @@ class AlertDialogo{
                 ) // fund
                 ),
                 onPressed: (){
-                  Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage(title: 'ColaboraUnimed')));
+                  Navigator.of(context).pushReplacementNamed("/home");
                 },
                 child: Text("Voltar a Home", style: TextStyle(
                   color: Colors.white,
@@ -98,8 +97,7 @@ class AlertDialogo{
                 ) // fundo verde // texto branco
                 ),
                 onPressed: (){
-                  Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Historico(title: 'ColaboraUnimed')));
+                  Navigator.of(context).pushReplacementNamed("/historico");
                 },
                 child: Text("Ver histórico", style: TextStyle(
                   color: Colors.white,

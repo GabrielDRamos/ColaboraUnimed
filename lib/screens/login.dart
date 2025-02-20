@@ -15,10 +15,7 @@ class LoginPageState extends State<Login> {
 
 
   void _login() {
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (context) => MyHomePage(title: "ColaboraUnimed")));
+    Navigator.of(context).pushReplacementNamed("/home");
   }
 
   @override

@@ -53,12 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               children: emojis.map((emoji) {
                                 return GestureDetector(
                                   onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => const Checkin(
-                                              title: "ColaboraUnimed")),
-                                    );
+                                    Navigator.of(context).pushReplacementNamed("/checkin");
                                   },
                                   child: Text(
                                     emoji,

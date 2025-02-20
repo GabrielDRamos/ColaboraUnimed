@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:secondapptest/colors.dart';
 import 'package:secondapptest/screens/login.dart';
+import 'package:secondapptest/screens/my_home_page.dart';
 import 'package:secondapptest/screens/perfil.dart';
+
+import 'checkin.dart';
+import 'historico.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,7 +17,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: kUnimedTheme,
       debugShowCheckedModeBanner: false,
-      home: const Login(title: 'ColaboraUnimed',),
+      initialRoute: "/login",
+      routes:{ "/login": (context) => Login(title: 'ColaboraUnimed',),
+        "/home": (context) => MyHomePage(title: 'ColaboraUnimed'),
+      "/checkin": (context) => Checkin(title: 'ColaboraUnimed',),
+      "/historico": (context) => Historico(title: 'ColaboraUnimed',),
+      "/perfil": (context) => Perfil()}
     );
   }
 }
