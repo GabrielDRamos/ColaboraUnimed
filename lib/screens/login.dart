@@ -106,7 +106,7 @@ class LoginPageState extends State<Login> {
                         onPressed: (){
                           if(_formKey.currentState!.validate()){
                             print(senhaController.text);
-                            _login;
+                            _login();
                             }
                           },
                         style: ElevatedButton.styleFrom(
