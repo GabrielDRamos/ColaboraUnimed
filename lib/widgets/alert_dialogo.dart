@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:secondapptest/screens/historico.dart';
-import 'package:secondapptest/screens/my_home_page.dart';
+
 
 class AlertDialogo{
 

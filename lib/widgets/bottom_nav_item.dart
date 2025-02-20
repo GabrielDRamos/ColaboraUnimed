@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:secondapptest/screens/my_home_page.dart';
-import 'package:secondapptest/screens/perfil.dart';
 
 class BottomNavItem extends StatelessWidget {
   const BottomNavItem({super.key});

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:secondapptest/screens/my_home_page.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key, required this.title});

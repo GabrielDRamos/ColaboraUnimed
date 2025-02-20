@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:secondapptest/widgets/app_bar_item.dart';
 import 'package:secondapptest/widgets/bottom_nav_item.dart';
 import 'package:secondapptest/widgets/home_button.dart';
-import 'checkin.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
