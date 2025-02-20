@@ -47,7 +47,6 @@ class _CheckinState extends State<Checkin> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
                   "Checkin",
@@ -57,8 +56,8 @@ class _CheckinState extends State<Checkin> {
                     color: Color.fromARGB(255, 0, 153, 93),
                   ),
                 ),
-                Text("Gostaríamos de cuidar de você, nos ajude!"),
-                Text("Como você está agora emocional e fisicamente?"),
+                Text("Gostaríamos de cuidar de você, nos ajude!", textAlign: TextAlign.center,),
+                Text("Como você está agora emocional e fisicamente?", textAlign: TextAlign.center),
               ],
             ),
             SizedBox(

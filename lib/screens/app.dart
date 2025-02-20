@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: kUnimedTheme,
       debugShowCheckedModeBanner: false,
-      home: const Perfil(),
+      home: const Login(title: 'ColaboraUnimed',),
     );
   }
 }
