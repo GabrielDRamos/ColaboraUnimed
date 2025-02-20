@@ -59,7 +59,9 @@ class LoginPageState extends State<Login> {
                           },
                           keyboardType: TextInputType.number,
                           controller: matriculaController,
+                          maxLength: 5,
                           decoration: InputDecoration(
+                              counterText: "",
                               labelText: "Digite sua matrícula",
                               filled: true,
                               fillColor: Colors.white,
