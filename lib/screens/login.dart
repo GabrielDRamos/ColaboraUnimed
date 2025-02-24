@@ -1,4 +1,11 @@
+import 'dart:async';
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
+
+
+
 
 class Login extends StatefulWidget {
   const Login({super.key, required this.title});
@@ -8,15 +15,60 @@ class Login extends StatefulWidget {
 }
 
 class LoginPageState extends State<Login> {
-  TextEditingController matriculaController = TextEditingController();
+  TextEditingController cpfController = TextEditingController();
   TextEditingController senhaController = TextEditingController();
   final _formKey  = GlobalKey<FormState>();
+  bool isLoading = false;
 
+  Future<void> _login() async {
+    setState(() {
+      isLoading = true;
+    });
 
-  void _login() {
-    Navigator.of(context).pushReplacementNamed("/home");
+    final url = Uri.parse("https://samuweb.unimedjp.com.br/ords/totvsprod/aac/aplicativo_cliente2/fazer_login_teste");
+
+    try {
+      final response = await http.post(
+          url,
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer lsVFVuF0k3v9ivYT4jI3yA'
+          },
+        body:json.encode({
+          'cpf': cpfController.text,
+          'senha': senhaController.text,
+        })
+
+      );
+
+      if(response.statusCode == 200){
+        final data = json.decode(response.body);
+        print(data);
+
+        if(data['resultado'].toString().toLowerCase() == 'true'){
+          Navigator.pushReplacementNamed(context, '/home');
+        }else {
+          ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text("Dados inválidos!"),)
+          );
+        }
+      }else{
+        ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text("Ocorreu um erro! ${response.statusCode}"),)
+        );
+      }
+    } catch(e){
+      ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Falha na operação"),)
+      );
+    }
+    //Navigator.of(context).pushReplacementNamed("/home");
   }
+  
 
+  
+
+  
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -48,14 +100,14 @@ class LoginPageState extends State<Login> {
                         padding: const EdgeInsets.all(8.0),
                         child: TextFormField(
                           validator: (value){
-                            if(value!.isEmpty || int.parse(value) < 0) {
+                            if(value == null || value.isEmpty ) {
                               return 'Insira uma matrícula';
                             }
                             return null;
                           },
                           keyboardType: TextInputType.number,
-                          controller: matriculaController,
-                          maxLength: 5,
+                          controller: cpfController,
+                          maxLength: 11,
                           decoration: InputDecoration(
                               counterText: "",
                               labelText: "Digite sua matrícula",
@@ -99,12 +151,6 @@ class LoginPageState extends State<Login> {
                     ),
                     SizedBox(height: 20),
                     ElevatedButton(
-                        onPressed: (){
-                          if(_formKey.currentState!.validate()){
-                            print(senhaController.text);
-                            _login();
-                            }
-                          },
                         style: ElevatedButton.styleFrom(
                           shadowColor: Color.fromARGB(255, 0, 0, 0),
                           elevation: 5,
@@ -117,6 +163,11 @@ class LoginPageState extends State<Login> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                         ),
+                        onPressed: (){
+                          if(_formKey.currentState!.validate()){
+                            _login();
+                          }
+                        },
                         child: Text("Acessar"))
                   ],
                 ),
@@ -140,7 +191,7 @@ class LoginPageState extends State<Login> {
                         fontWeight: FontWeight.bold,
                       )),
                   Image.asset(
-                    'lib/assets/unimed.png',
+                    'assets/unimed.png',
                     width: 192,
                     height: 70,
                   )

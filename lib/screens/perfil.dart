@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:secondapptest/widgets/app_bar_item.dart';
 import 'package:secondapptest/widgets/bottom_nav_item.dart';
 
@@ -60,6 +61,7 @@ class Perfil extends StatelessWidget {
                               children: [
                             TextSpan(
                               text: 'Nome: ',
+                              style: TextStyle(color: Colors.black87)
                             ),
                             TextSpan(
                                 text: "Gabriel Duarte Ramos",
@@ -72,6 +74,7 @@ class Perfil extends StatelessWidget {
                               children: [
                             TextSpan(
                               text: 'Matrícula: ',
+                                style: TextStyle(color: Colors.black87)
                             ),
                             TextSpan(
                                 text: "12345",
@@ -82,7 +85,7 @@ class Perfil extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 16,
+                height: 25,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -95,12 +98,12 @@ class Perfil extends StatelessWidget {
                       IconButton(
                           padding: EdgeInsets.zero,
                           onPressed: () {},
-                          icon: Icon(
-                            Icons.health_and_safety_sharp,
-                            size: 40,
-
-                            color: Color.fromRGBO(0, 61, 37, 1),
-                          )),
+                          icon: SvgPicture.asset(
+                            colorFilter:  const ColorFilter.mode(Color.fromRGBO(0, 61, 37, 1), BlendMode.srcIn),
+                            width: 40,
+                            height: 40,
+                            'assets/syringe-solid.svg',
+                            semanticsLabel: 'Cartão de Vacinas',)),
                       Text(
                         "Cartão de vacinas",
                         textAlign: TextAlign.center,
@@ -118,11 +121,12 @@ class Perfil extends StatelessWidget {
                         IconButton(
                             padding: EdgeInsets.zero,
                             onPressed: () {},
-                            icon: Icon(
-                              Icons.card_giftcard,
-                              size: 40,
-                              color: Color.fromRGBO(0, 61, 37, 1),
-                            )),
+                            icon: SvgPicture.asset(
+                              colorFilter:  const ColorFilter.mode(Color.fromRGBO(0, 61, 37, 1), BlendMode.srcIn),
+                              width: 40,
+                              height: 40,
+                              'assets/address-card-regular.svg',
+                              semanticsLabel: 'Meu Dados',)),
                         Text(
                           "Meus Dados",
                           softWrap: true,
@@ -141,12 +145,13 @@ class Perfil extends StatelessWidget {
                         IconButton(
                           padding: EdgeInsets.zero,
                             onPressed: () {},
-                            icon: Icon(
-                              Icons.healing,
-                              size: 40,
-                              color: Color.fromRGBO(0, 61, 37, 1),
-
-                            )),
+                            icon: SvgPicture.asset(
+                              colorFilter:  const ColorFilter.mode(Color.fromRGBO(0, 61, 37, 1), BlendMode.srcIn),
+                              width: 40,
+                              height: 40,
+                              'assets/file-medical-solid.svg',
+                              semanticsLabel: 'Exames',),
+                            ),
                         Text(
                           "Exames Periódicos",
                           textAlign: TextAlign.center,

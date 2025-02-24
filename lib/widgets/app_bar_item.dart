@@ -16,7 +16,7 @@ class AppBarItem  extends StatelessWidget implements PreferredSizeWidget {
                  Stack(
                     alignment: Alignment.center,
                     children: [
-                      Image.asset('lib/assets/Vector.png'),
+                      Image.asset('assets/Vector.png'),
                       Text("1", style: TextStyle(
                           color: Color.fromARGB(130, 0, 0, 0),
                           fontSize: 16,
