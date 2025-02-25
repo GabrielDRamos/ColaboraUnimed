@@ -43,8 +43,8 @@ class Perfil extends StatelessWidget {
                           color: Theme.of(context).colorScheme.onPrimary),
                     ),
                     child: Icon(
-                      Icons.person_4,
-                      size: 45,
+                      Icons.person,
+                      size: 50,
                       color: Color.fromRGBO(0, 61, 37, 1),
                     ),
                   ),
@@ -97,7 +97,8 @@ class Perfil extends StatelessWidget {
                     children: [
                       IconButton(
                           padding: EdgeInsets.zero,
-                          onPressed: () {},
+                          onPressed: () {
+                          },
                           icon: SvgPicture.asset(
                             colorFilter:  const ColorFilter.mode(Color.fromRGBO(0, 61, 37, 1), BlendMode.srcIn),
                             width: 40,
@@ -120,7 +121,9 @@ class Perfil extends StatelessWidget {
                       children: [
                         IconButton(
                             padding: EdgeInsets.zero,
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).pushReplacementNamed("/meusdados");
+                            },
                             icon: SvgPicture.asset(
                               colorFilter:  const ColorFilter.mode(Color.fromRGBO(0, 61, 37, 1), BlendMode.srcIn),
                               width: 40,
@@ -144,7 +147,9 @@ class Perfil extends StatelessWidget {
                       children: [
                         IconButton(
                           padding: EdgeInsets.zero,
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).pushReplacementNamed("/periodicos");
+                            },
                             icon: SvgPicture.asset(
                               colorFilter:  const ColorFilter.mode(Color.fromRGBO(0, 61, 37, 1), BlendMode.srcIn),
                               width: 40,
