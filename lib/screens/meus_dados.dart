@@ -41,7 +41,7 @@ class MeusDados extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Nome: Gabriel Duarte Ramos",
+                              "Nome: Gabriel Duarte",
                               style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold
@@ -102,7 +102,7 @@ class MeusDados extends StatelessWidget {
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
-                              SizedBox(width: 130,),
+                              SizedBox(width: 125,),
                               Icon(Icons.keyboard_arrow_right)
                             ],
                           ),
@@ -129,7 +129,7 @@ class MeusDados extends StatelessWidget {
                                         fontWeight: FontWeight.bold
                                     ),
                                   ),
-                                  SizedBox(width: 75,),
+                                  SizedBox(width: 65,),
                                   Icon(Icons.keyboard_arrow_right)
                                 ],
                               ),
@@ -157,7 +157,7 @@ class MeusDados extends StatelessWidget {
                                         fontWeight: FontWeight.bold
                                     ),
                                   ),
-                                  SizedBox(width: 72,),
+                                  SizedBox(width: 60,),
                                   Icon(Icons.exit_to_app)
                                 ],
                               ),

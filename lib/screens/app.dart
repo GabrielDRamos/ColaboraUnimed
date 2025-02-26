@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: kUnimedTheme,
       debugShowCheckedModeBanner: false,
-      initialRoute: "/home",
+      initialRoute: "/login",
       routes:{
         "/login": (context) => Login(title: 'ColaboraUnimed',),
         "/home": (context) => MyHomePage(title: 'ColaboraUnimed'),

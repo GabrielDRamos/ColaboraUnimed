@@ -117,7 +117,7 @@ class _HistoricoState extends State<Historico> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: 160,
+                    width: 175,
                     height: 160,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
