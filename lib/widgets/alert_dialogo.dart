@@ -98,7 +98,7 @@ class AlertDialogo{
                 onPressed: (){
                   Navigator.of(context).pushReplacementNamed("/historico");
                 },
-                child: Text("Ver histórico", style: TextStyle(
+                child: Text("Ver Histórico", style: TextStyle(
                   color: Colors.white,
                   fontSize: 16
                 ),),

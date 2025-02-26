@@ -15,7 +15,9 @@ class BottomNavItem extends StatelessWidget {
             FloatingActionButton.small(onPressed: (){
               Navigator.of(context).pushReplacementNamed("/home");
             }, backgroundColor: Colors.white, child: Icon(Icons.home, color: Color.fromARGB(255, 0, 61, 37) ,size: 40,)),
-            FloatingActionButton.small(onPressed: (){}, backgroundColor: Colors.white, child: Icon(Icons.edit_document, color: Color.fromARGB(255, 0, 61, 37) ,size: 40,)),
+            FloatingActionButton.small(onPressed: (){
+              Navigator.of(context).pushReplacementNamed("/questionarios");
+            }, backgroundColor: Colors.white, child: Icon(Icons.edit_document, color: Color.fromARGB(255, 0, 61, 37) ,size: 40,)),
             FloatingActionButton.small(onPressed: (){}, backgroundColor: Colors.white, child: Icon(Icons.play_circle, color: Color.fromARGB(255, 0, 61, 37) ,size: 40,)),
             FloatingActionButton.small(onPressed: (){
               Navigator.of(context).pushReplacementNamed("/perfil");

@@ -98,15 +98,16 @@ class Perfil extends StatelessWidget {
                       IconButton(
                           padding: EdgeInsets.zero,
                           onPressed: () {
+                            Navigator.of(context).pushReplacementNamed("/historico");
                           },
                           icon: SvgPicture.asset(
                             colorFilter:  const ColorFilter.mode(Color.fromRGBO(0, 61, 37, 1), BlendMode.srcIn),
                             width: 40,
                             height: 40,
-                            'assets/syringe-solid.svg',
-                            semanticsLabel: 'Cartão de Vacinas',)),
+                            'assets/clipboard-regular.svg',
+                            semanticsLabel: 'Histórico checkin',)),
                       Text(
-                        "Cartão de vacinas",
+                        "Histórico de checkin",
                         textAlign: TextAlign.center,
                         softWrap: true,
                         style: TextStyle(
@@ -118,6 +119,7 @@ class Perfil extends StatelessWidget {
                   )),
                   Expanded(
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         IconButton(
                             padding: EdgeInsets.zero,
@@ -144,6 +146,7 @@ class Perfil extends StatelessWidget {
                   ),
                   Expanded(
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         IconButton(
                           padding: EdgeInsets.zero,

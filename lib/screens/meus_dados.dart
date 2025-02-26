@@ -107,7 +107,7 @@ class MeusDados extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox( width:200, child: Divider(color: Colors.black,height: 10, thickness: 1)),
+                        SizedBox( width:200, child: Divider(color: Colors.black45,height: 10, thickness: 1)),
                       ],
                     )
                 ),
@@ -134,7 +134,7 @@ class MeusDados extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            SizedBox( width:200, child: Divider(color: Colors.black,height: 10, thickness: 1)),
+                            SizedBox( width:200, child: Divider(color: Colors.black45,height: 10, thickness: 1)),
                           ],
                         )
                     ),
@@ -157,12 +157,12 @@ class MeusDados extends StatelessWidget {
                                         fontWeight: FontWeight.bold
                                     ),
                                   ),
-                                  SizedBox(width: 75,),
+                                  SizedBox(width: 72,),
                                   Icon(Icons.exit_to_app)
                                 ],
                               ),
                             ),
-                            SizedBox( width:200, child: Divider(color: Colors.black,height: 10, thickness: 1)),
+                            SizedBox( width:200, child: Divider(color: Colors.black45,height: 10, thickness: 1)),
                           ],
                         )
                     ),
